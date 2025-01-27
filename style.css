@@ -23,10 +23,10 @@ body {
 }
 
 h1 {
-    color: #ff9900;
+    color: #solid black;
     font-size: 2.5em;
     margin: 0 0 10px 0;
-    text-shadow: 2px 2px 5px #000000; /* Dark shadow for all h1 headings */
+    text-shadow: 2px 2px 5px solid black; /* Dark shadow for all h1 headings */
     text-outline: 1px solid #000; /* Black outline for yellow text */
 }
 
