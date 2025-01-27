@@ -30,10 +30,10 @@ h1 {
     text-outline: 1px solid #000; /* Black outline for yellow text */
 }
 
-#kitty-coin {
+#FIXER COIN {
     width: 250px;
     height: 250px;
-    background-image: url('https://i.postimg.cc/CKVYGz9J/42064909-8944306.png');
+    background-image: url('https://i.postimg.cc/CLddxry0/IMG-20250125-183546.jpg');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -58,7 +58,7 @@ h1 {
     100% { transform: scale(1); }
 }
 
-#kitty-coin.zoomed {
+#FIXER COIN.zoomed {
     animation: zoom 0.5s forwards; /* Apply the zoom animation */
 }
 
