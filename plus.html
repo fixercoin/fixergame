@@ -34,7 +34,7 @@
     <div class="container">
         <h1 id="hello-text"></h1>
         <p id="coins-text">FIXERCOIN : 0</p>
-        <div id="Kitty-coin" onclick="handleKittyClick()"></div>
+        <div id="kitty-coin" onclick="handlekittyClick()"></div>
         <div id="energy-bar-container">
             <div id="energy-bar"></div>
             <div id="energy-label">
@@ -245,7 +245,7 @@
             const coinsText = document.getElementById('coins-text');
             const energyBar = document.getElementById('energy-bar');
             const energyText = document.getElementById('energy-text');
-            const FIXERCOIN = document.getElementById('FIXER-COIN');
+            const kittycoin = document.getElementById('kitty-coin');
             const fullTankCost = 200;
             const multitapCost = 150;
             const energyLimitCost = 300;
@@ -255,7 +255,7 @@
 
             // Update UI with saved data
             function updateUI() {
-                coinsText.textContent = `FIXER COINS: ${coins}`;
+                coinsText.textContent = `kitty coins: ${coins}`;
                 energyBar.style.width = `${(energy / maxEnergy) * 100}%`;
                 energyText.textContent = `Energy: ${Math.round((energy / maxEnergy) * 100)}%`;
                 localStorage.setItem('coins', coins);
@@ -264,8 +264,8 @@
                 adjustInputWidth();
             }
 
-            // Handle FIXER click event
-            function handleFIXERClick() {
+            // Handle kitty click event
+            function handlekittyClick() {
                 if (energy > 0) {
                     coins += 1; // Increase coins by 1 per click
                     energy -= energyLossPerClick; // Decrease energy
