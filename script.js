@@ -188,7 +188,7 @@ document.addEventListener('DOMContentLoaded', function() {
         updateMultitapClicks();
         checkFullTankCooldown();
 
-        coinsText.textContent = `KittyCoins: ${coins}`;
+        coinsText.textContent = `FIXER COIN : ${coins}`;
         energyBar.style.width = `${(energy / energyLimit) * 100}%`;
         energyText.textContent = `Energy: ${energy}/${energyLimit}`;
 
