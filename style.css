@@ -395,8 +395,8 @@ p {
 }
 
 /* Define styles for text outline based on color */
-.white-text { text-outline: 1px solid #000; }
-.black-text { text-outline: 1px solid #fff; }
+.blue-text { text-outline: 1px solid blue; }
+.blue-text { text-outline: 1px solid blue; }
 
 /* Style all elements that are not within the referral system */
 *:not(.referral-form input, 
