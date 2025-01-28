@@ -26,7 +26,7 @@ h1 {
     color: blue;
     font-size: 2.5em;
     margin: 0 0 10px 0;
-    text-shadow: 2px 2px 5px solid black; /* Dark shadow for all h1 headings */
+    text-shadow: 2px 2px 5px black; /* Dark shadow for all h1 headings */
     text-outline: 1px solid #000; /* Black outline for yellow text */
 }
 
@@ -40,7 +40,7 @@ h1 {
     margin: 20px auto;
     cursor: pointer;
     transition: transform 0.3s ease;
-    animation: float 2s ease-in-out infinite;
+    animation: float 8s ease-in-out infinite;
     position: relative;
 }
 
@@ -59,7 +59,7 @@ h1 {
 }
 
 #kitty-coin.zoomed {
-    animation: zoom 0.1s forwards; /* Apply the zoom animation */
+    animation: zoom 0.5s forwards; /* Apply the zoom animation */
 }
 
 #energy-bar-container {
@@ -114,7 +114,7 @@ h1 {
 #energy-text {
     font-size: 1em;
     color: #fff;
-    text-shadow: 2px 2px 5px #000000; /* Dark shadow for energy text */
+ /* Dark shadow for energy text */
 }
 
 p {
