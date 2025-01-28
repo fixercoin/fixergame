@@ -7,7 +7,7 @@
         }
 /* style.css */
 body {
-    font-family: 'Modak', cursive; /* Changed font-family to 'Modak' */
+    font-family: 'arial', cursive; /* Changed font-family to 'Modak' */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -223,7 +223,7 @@ p {
 }
 
 .modal-content {
-    background-image: url('https://i.postimg.cc/CKVYGz9J/42064909-8944306.png');
+    background-image: url('https://i.postimg.cc/xTfYcCcM/10300834.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -242,7 +242,7 @@ p {
 .close {
     color: #fff;
     float: right;
-    font-size: 28px;
+    font-size: 20px;
     text-shadow: 2px 2px 5px #000000;
 }
 
@@ -389,7 +389,7 @@ p {
 }
 
 * {
-    font-family: 'Modak', cursive; 
+    font-family: 'arial', cursive; 
     font-weight: normal;
     text-shadow: 2px 2px 5px #000000;
 }
