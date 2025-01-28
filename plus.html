@@ -202,7 +202,7 @@
 
             // Update UI with saved data
             function updateUI() {
-                coinsText.textContent = `: ${coins}`;
+                coinsText.textContent = `kitty coin: ${coins}`;
                 energyBar.style.width = `${(energy / maxEnergy) * 100}%`;
                 energyText.textContent = `Energy: ${Math.round((energy / maxEnergy) * 100)}%`;
                 localStorage.setItem('coins', coins);
