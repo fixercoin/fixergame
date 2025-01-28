@@ -23,7 +23,7 @@ body {
 }
 
 h1 {
-    color: #f0f0f0;
+    color: blue;
     font-size: 2.5em;
     margin: 0 0 10px 0;
     text-shadow: 2px 2px 5px solid black; /* Dark shadow for all h1 headings */
@@ -40,7 +40,7 @@ h1 {
     margin: 20px auto;
     cursor: pointer;
     transition: transform 0.3s ease;
-    animation: float 5s ease-in-out infinite;
+    animation: float 2s ease-in-out infinite;
     position: relative;
 }
 
@@ -59,7 +59,7 @@ h1 {
 }
 
 #kitty-coin.zoomed {
-    animation: zoom 0.5s forwards; /* Apply the zoom animation */
+    animation: zoom 0.1s forwards; /* Apply the zoom animation */
 }
 
 #energy-bar-container {
