@@ -329,7 +329,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 clearInterval(interval);
                 const winningNumber = Math.floor(Math.random() * (1000 - 100 + 1)) + 100;
                 const color = getColorForNumber(winningNumber);
-                rouletteResult.textContent = `Winnings: ${winningNumber}`;
+                rouletteResult.textContent = `CLAIMED : ${winningNumber}`;
                 rouletteResult.style.color = color;
                 coins += winningNumber;
                 saveGameData();
