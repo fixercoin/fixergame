@@ -338,7 +338,7 @@ document.addEventListener('DOMContentLoaded', function() {
             } else {
                 const randomNumber = Math.floor(Math.random() * (1000 - 100 + 1)) + 100;
                 const color = getColorForNumber(randomNumber);
-                rouletteResult.textContent = `Winnings: ${randomNumber}`;
+                rouletteResult.textContent = `CLAIMING: ${randomNumber}`;
                 rouletteResult.style.color = color;
             }
         }, updateInterval);
