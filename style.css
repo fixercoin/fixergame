@@ -47,7 +47,7 @@ h1 {
     margin: 20px auto;
     cursor: pointer;
     transition: transform 0.3s ease;
-    animation: float 8s ease-in-out infinite;
+    animation: float 8s ease-round infinite;
     position: relative;
 }
 
