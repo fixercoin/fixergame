@@ -294,7 +294,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
             if (targetId === 'games-section') {
                 const roulette = document.getElementById('roulette');
-                roulette.style.backgroundImage = "url('https://i.postimg.cc/0QxHWvKw/IMG-20250129-145622-removebg-preview.png')";
+                roulette.style.backgroundImage = "url('https://i.postimg.cc/wjP8MjTz/IMG-20250130-205706-removebg-preview.png')";
             }
         });
     });
