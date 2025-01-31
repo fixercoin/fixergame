@@ -389,32 +389,4 @@
   
 </html>
 
-<script>
 
-
-
-
-document.addEventListener('DOMContentLoaded', function() {
-    // Ініціалізація облікових даних
-    const accountId = localStorage.getItem('accountId') || generateUniqueId();
-    localStorage.setItem('accountId', accountId);
-
-    let coins = parseInt(localStorage.getItem(`${accountId}_coins`)) || 0;
-    let energy = parseInt(localStorage.getItem(`${accountId}_energy`)) || 1000;
-    let energyLimit = parseInt(localStorage.getItem(`${accountId}_energyLimit`)) || 1000;
-    const energyCostPerClick = 5;
-
-    const coinsText = document.getElementById('coins-text');
-    const energyBar = document.getElementById('energy-bar');
-    const energyText = document.getElementById('energy-text');
-    const kittyCoin = document.getElementById('kitty-coin');
-    const fullTankButton = document.getElementById('full-tank');
-
-    let clickUpgradeMultiplier = parseInt(localStorage.getItem(`${accountId}_clickUpgradeMultiplier`)) || 1;
-    let multitapClicks = parseInt(localStorage.getItem(`${accountId}_multitapClicks`)) || 1;
-    let rechargingSpeed = parseInt(localStorage.getItem(`${accountId}_rechargingSpeed`)) || 5;
-    let fullTankUsageCount = parseInt(localStorage.getItem(`${accountId}_fullTankUsageCount`)) || 0;
-    const maxFullTankUsage = 6;
-    let lastFullTankResetTime = new Date(localStorage.getItem(`${accountId}_lastFullTankResetTime`)) || new Date();
-
-    l
