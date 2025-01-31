@@ -33,40 +33,38 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 <body>
-    <div class="container">
-        
-      
-    
-        <div id="kitty-coin" onclick="handlekittyClick()"></div>
+     <div class="container">
+        <h1 id="hello-text"></h1>
+        <p id="coins-text">KittyCoins: 0</p>
+        <div id="kitty-coin" onclick="handleKittyClick()"></div>
         <div id="energy-bar-container">
             <div id="energy-bar"></div>
             <div id="energy-label">
-                <span id="energy-text">ENERGY 100%</span>
-          
-          
+                <span id="energy-text">Energy: 100%</span>
+            </div>
         </div>
     </div>
 
     <!-- Bottom Menu -->
     <div class="bottom-menu">
-        <button data-target="mine-section"><i class="fas fa-gem"></i><span>CONNECT</span></button>
-        <button data-target="invites-section"><i class="fas fa-user-friends"></i><span>INVITE</span></button>
-        <button data-target="tap-section"><i class="fas fa-tachometer-alt"></i><span>BOOST</span></button>
-        <button data-target="earn-section"><i class="fas fa-dollar-sign"></i><span>SUBSCRIBE</span></button>
-        <button data-target="games-section"><i class="fas fa-gamepad"></i><span>SPIN </span></button>
+        <button data-target="mine-section"><i class="fas fa-gem"></i><span>Mine</span></button>
+        <button data-target="invites-section"><i class="fas fa-user-friends"></i><span>Invites</span></button>
+        <button data-target="tap-section"><i class="fas fa-tachometer-alt"></i><span>Boost</span></button>
+        <button data-target="earn-section"><i class="fas fa-dollar-sign"></i><span>Earn</span></button>
+        <button data-target="games-section"><i class="fas fa-gamepad"></i><span>Games</span></button>
     </div>
 
     <!-- Modals -->
     <div id="mine-section" class="modal-section">
         <div class="modal-content">
             <span class="close">&times;</span>
-            <h2>CONNECT</h2>
-            
+            <h2>Mine</h2>
+            <p></p>
             <div id="mines-wrapper">
                 <div class="mine-item">
                     <div class="image-container">
                         <img src="https://i.postimg.cc/43YjYcYN/bitget-exchange-2-removebg-preview.png" alt="Metal Mine" class="mine-image">
-              
+                    </div>
                     <div class="button-container">
                         <button class="mine-button" id="metal-mine">FIXER ON BITGET SOON </button>
             
