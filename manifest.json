@@ -1,0 +1,16 @@
+async function connectToWallet() {
+    const tonConnectUI = new TON_CONNECT_UI.TonConnectUI({
+        manifestUrl: 'https://<YOUR_APP_URL>/tonconnect-manifest.json',
+        buttonRootId: 'ton-connect'
+    });
+
+    try {
+        const connectedWallet = await tonConnectUI.connectWallet();
+        console.log(connectedWallet);
+    } catch (error) {
+        console.error("Error connecting to wallet:", error);
+    }
+}
+
+// Call the function
+connectToWallet();
