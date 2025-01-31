@@ -1,1 +1,390 @@
 
+  
+  
+  <!DOCTYPE html>
+
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link href="https://fonts.googleapis.com/css2?family=Modak&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <script src=""></script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello Kitty Clicker</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1 id="hello-text"></h1>
+        <p id="coins-text">KittyCoins: 0</p>
+        <div id="kitty-coin" onclick="handleKittyClick()"></div>
+        <div id="energy-bar-container">
+            <div id="energy-bar"></div>
+            <div id="energy-label">
+                <span id="energy-text">Energy: 100%</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bottom Menu -->
+    <div class="bottom-menu">
+        <button data-target="mine-section"><i class="fas fa-gem"></i><span>Mine</span></button>
+        <button data-target="invites-section"><i class="fas fa-user-friends"></i><span>Invites</span></button>
+        <button data-target="tap-section"><i class="fas fa-tachometer-alt"></i><span>Boost</span></button>
+        <button data-target="earn-section"><i class="fas fa-dollar-sign"></i><span>Earn</span></button>
+        <button data-target="games-section"><i class="fas fa-gamepad"></i><span>Games</span></button>
+    </div>
+
+    <!-- Modals -->
+    <div id="mine-section" class="modal-section">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Mine</h2>
+            <p></p>
+            <div id="mines-wrapper">
+                <div class="mine-item">
+                    <div class="image-container">
+                        <img src="https://i.pinimg.com/originals/32/0f/f3/320ff31aebd303b7df0a2d1d78b135a5.jpg" alt="Metal Mine" class="mine-image">
+                    </div>
+                    <div class="button-container">
+                        <button class="mine-button" id="metal-mine">Metal Mine (Level 1) - 1000 </button>
+                    </div>
+                    <p>A basic mine that produces metal. It's a good starting point for your mining operations.</p>
+                </div>
+                <div class="mine-item">
+                    <div class="image-container">
+                        <img src="https://i.pinimg.com/originals/56/98/b1/5698b1ae526873962acf3c1c0edb456f.jpg" alt="Aluminum Mine" class="mine-image">
+                    </div>
+                    <div class="button-container">
+                        <button class="mine-button" id="aluminum-mine">Aluminum Mine (Level 1) - 1500 </button>
+                    </div>
+                    <p>Produce Aluminum, a lightweight yet strong metal. A valuable addition to your mining empire.</p>
+                </div>
+                <div class="mine-item">
+                    <div class="image-container">
+                        <img src="https://i.pinimg.com/originals/1c/eb/84/1ceb84ae5f433afb6d9eaba72dba3dce.png" alt="Copper Mine" class="mine-image">
+                    </div>
+                    <div class="button-container">
+                        <button class="mine-button" id="copper-mine">Copper Mine (Level 1) - 2000 </button>
+                    </div>
+                    <p>A source of Copper, a highly conductive metal. Expand your mining expertise.</p>
+                </div>
+                <div class="mine-item">
+                    <div class="image-container">
+                        <img src="https://i.pinimg.com/originals/42/f0/bb/42f0bbd6041b9a6dc85fd47b02cbd786.jpg" alt="Bronze Mine" class="mine-image">
+                    </div>
+                    <div class="button-container">
+                        <button class="mine-button" id="bronze-mine">Bronze Mine (Level 1) - 2500 </button>
+                    </div>
+                    <p>Produce Bronze, a versatile alloy known for its strength and durability. A valuable asset.</p>
+                </div>
+                <div class="mine-item">
+                    <div class="image-container">
+                        <img src="https://i.pinimg.com/originals/5c/38/ef/5c38ef5941c6958a925df8912ba495f0.png" alt="Silver Mine" class="mine-image">
+                    </div>
+                    <div class="button-container">
+                        <button class="mine-button" id="silver-mine">Silver Mine (Level 1) - 3000 </button>
+                    </div>
+                    <p>A source of Silver, a precious metal known for its beauty and conductivity. A lucrative venture.</p>
+                </div>
+                <div class="mine-item">
+                    <div class="image-container">
+                        <img src="https://i.pinimg.com/originals/7a/48/bd/7a48bdf733b75751daf93ca7b920e325.jpg" alt="Diamond Mine" class="mine-image">
+                    </div>
+                    <div class="button-container">
+                        <button class="mine-button" id="diamond-mine">Diamond Mine (Level 1) - 3500 </button>
+                    </div>
+                    <p>Produce Diamonds, the most valuable gemstone. A surefire way to increase your wealth.</p>
+                </div>
+                <div class="mine-item">
+                    <div class="image-container">
+                        <img src="https://i.pinimg.com/originals/7d/66/e9/7d66e9a66b21889dcecc7f1834105db7.jpg" alt="Platinum Mine" class="mine-image">
+                    </div>
+                    <div class="button-container">
+                        <button class="mine-button" id="platinum-mine">Platinum Mine (Level 1) - 4000 </button>
+                    </div>
+                    <p>Produce Platinum, a rare and valuable metal. A prized addition to your collection.</p>
+                </div>
+                <div class="mine-item">
+                    <div class="image-container">
+                        <img src="https://i.pinimg.com/originals/a7/7d/30/a77d30080b6d094bf05a7046d8073aba.jpg" alt="Diamond Mine" class="mine-image">
+                    </div>
+                    <div class="button-container">
+                        <button class="mine-button" id="diamond-mine">Diamond Mine (Level 1) - 4500 </button>
+                    </div>
+                    <p>Unleash the power of Diamonds, the most valuable gemstone. A symbol of wealth and prestige!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="invites-section" class="modal-section">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Invites</h2>
+            <p>Invite friends and earn rewards!</p>
+            <div class="referral-form">
+                <label for="referral-code">Enter your referral code:</label>
+                <input type="text" id="referral-code" placeholder="Referral code">
+                <button id="apply-referral" class="common-button">Apply</button>
+                <p id="referral-message"></p>
+            </div>
+            <div class="referral-link">
+                <p>Your referral code:</p>
+                <input type="text" id="referral-code-display" readonly>
+                <button id="copy-code" class="common-button">Copy Code</button>
+            </div>
+            <div class="referral-link">
+                <p>Share this link:</p>
+                <input type="text" id="share-link" value="t.me/HelloKittyClickerBot" readonly>
+                <button id="copy-link" class="common-button">Copy Link</button>
+            </div>
+            <div class="referral-reward">
+                <p>Reward for inviting a friend: 1000</p>
+            </div>
+        </div>
+    </div>
+   <br> <div id="tap-section" class="modal-section">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Boost</h2>
+            <div id="improvements">
+                <div class="booster-label">Free daily boosters</div>
+                <button id="full-tank" data-cost="200" class="common-button"><i class="fas fa-gas-pump"></i> Full Tank</button>
+                <div class="booster-label">Boosters</div>
+                <button id="multitap" data-cost="150" class="common-button"><i class="fas fa-tasks"></i> Multitap</button>
+                <button id="energy-limit" data-cost="300" class="common-button"><i class="fas fa-battery-full"></i> Energy Limit</button>
+                <button id="recharging-speed" data-cost="250" class="common-button"><i class="fas fa-clock"></i> Recharging Speed</button>
+                <p id="improvement-message"></p>
+            </div>
+        </div>
+    </div>
+    <div id="earn-section" class="modal-section">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Earn</h2>
+            <p>Earn functionality here.</p>
+
+            <!-- Subscription Section -->
+            <div id="telegram-subscribe-section">
+                <h3>Subscribe to our Telegram channel for a reward!</h3>
+                <a href="https://t.me/fixercoin" target="_blank" id="verify-subscription" class="common-button">Join Telegram Channel</a> 
+                <p id="subscription-message"></p>
+            </div>
+        </div>
+    </div>
+    <div id="games-section" class="modal-section">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Games</h2>
+            <div id="roulette-wrapper">
+                <div id="roulette-container">
+                    <div id="roulette"></div>
+                </div>
+                <div id="roulette-info">Winnings: 0</div>
+                <button id="spin-roulette-btn" class="common-button">Spin the Wheel</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // JavaScript for handling modal visibility
+        const buttons = document.querySelectorAll('.bottom-menu button');
+        const modals = document.querySelectorAll('.modal-section');
+        const closeButtons = document.querySelectorAll('.close');
+
+        buttons.forEach(button => {
+            button.addEventListener('click', () => {
+                const targetId = button.getAttribute('data-target');
+                const targetModal = document.getElementById(targetId);
+                if (targetModal) {
+                    targetModal.style.display = 'flex'; // Show the modal
+                }
+            });
+        });
+
+        closeButtons.forEach(closeButton => {
+            closeButton.addEventListener('click', () => {
+                const modalSection = closeButton.closest('.modal-section');
+                modalSection.style.display = 'none'; // Hide the modal
+            });
+        });
+
+        // Close modals when clicking outside of them
+        window.addEventListener('click', (event) => {
+            modals.forEach(modal => {
+                if (event.target === modal) {
+                    modal.style.display = 'none'; // Hide the modal
+                }
+            });
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+            // Load saved game data from Local Storage
+            let coins = localStorage.getItem('coins') ? parseInt(localStorage.getItem('coins')) : 0;
+            let energy = localStorage.getItem('energy') ? parseInt(localStorage.getItem('energy')) : 1000; // Increased maximum energy
+            const maxEnergy = 1000; // Increased maximum energy
+            const energyLossPerClick = 10; // Energy loss per click
+            const coinsText = document.getElementById('coins-text');
+            const energyBar = document.getElementById('energy-bar');
+            const energyText = document.getElementById('energy-text');
+            const kittyCoin = document.getElementById('kitty-coin');
+            const fullTankCost = 200;
+            const multitapCost = 150;
+            const energyLimitCost = 300;
+            const rechargingSpeedCost = 250;
+            let referralCode = localStorage.getItem('referralCode') || generateReferralCode();
+            let referralReward = 1000; // Updated reward amount for the new user
+
+            // Update UI with saved data
+            function updateUI() {
+                coinsText.textContent = `KittyCoins: ${coins}`;
+                energyBar.style.width = `${(energy / maxEnergy) * 100}%`;
+                energyText.textContent = `Energy: ${Math.round((energy / maxEnergy) * 100)}%`;
+                localStorage.setItem('coins', coins);
+                localStorage.setItem('energy', energy);
+                localStorage.setItem('referralCode', referralCode);
+                adjustInputWidth();
+            }
+
+            // Handle kitty click event
+            function handleKittyClick() {
+                if (energy > 0) {
+                    coins += 1; // Increase coins by 1 per click
+                    energy -= energyLossPerClick; // Decrease energy
+                    if (energy < 0) energy = 0;
+                    updateUI();
+                } else {
+                    alert('Not enough energy!');
+                }
+            }
+
+            // Handle button clicks in the Boost section
+            document.getElementById('full-tank').addEventListener('click', function() {
+                if (coins >= fullTankCost) {
+                    energy = maxEnergy;
+                    coins -= fullTankCost;
+                    updateUI();
+                    document.getElementById('improvement-message').textContent = `Full Tank activated!`;
+                } else {
+                    document.getElementById('improvement-message').textContent = `Not enough coins to activate Full Tank!`;
+                }
+            });
+
+            document.getElementById('multitap').addEventListener('click', function() {
+                if (coins >= multitapCost) {
+                    coins -= multitapCost;
+                    updateUI();
+                    document.getElementById('improvement-message').textContent = `Multitap activated!`;
+                } else {
+                    document.getElementById('improvement-message').textContent = `Not enough coins to activate Multitap!`;
+                }
+            });
+
+            document.getElementById('energy-limit').addEventListener('click', function() {
+                if (coins >= energyLimitCost) {
+                    maxEnergy += 100; // Increase energy limit
+                    coins -= energyLimitCost;
+                    updateUI();
+                    document.getElementById('improvement-message').textContent = `Energy limit increased!`;
+                } else {
+                    document.getElementById('improvement-message').textContent = `Not enough coins to increase Energy Limit!`;
+                }
+            });
+
+            document.getElementById('recharging-speed').addEventListener('click', function() {
+                if (coins >= rechargingSpeedCost) {
+                    coins -= rechargingSpeedCost;
+                    updateUI();
+                    document.getElementById('improvement-message').textContent = `Recharging speed improved!`;
+                } else {
+                    document.getElementById('improvement-message').textContent = `Not enough coins to improve Recharging Speed!`;
+                }
+            });
+
+            // Referral code handling
+            const referralCodeInput = document.getElementById('referral-code');
+            const applyReferralButton = document.getElementById('apply-referral');
+            const referralMessage = document.getElementById('referral-message');
+            const referralCodeDisplay = document.getElementById('referral-code-display');
+            const copyCodeButton = document.getElementById('copy-code');
+            const shareLink = document.getElementById('share-link');
+            const copyLinkButton = document.getElementById('copy-link');
+
+            function generateReferralCode() {
+                return Math.random().toString(36).substring(2, 8).toUpperCase();
+            }
+
+            function updateReferralCode() {
+                referralCodeDisplay.value = referralCode;
+                adjustInputWidth(); // Adjust input width to match referral code length
+            }
+
+            function adjustInputWidth() {
+                // Set input width to a fixed value
+                referralCodeDisplay.style.width = '200px';
+                referralCodeInput.style.width = '200px'; // Set the same width for input
+            }
+
+            function applyReferralCode(code) {
+                // Add logic to reward coins for valid referral codes
+                if (code === referralCode) {
+                    coins += referralReward; // Reward amount for the new user
+                    localStorage.setItem('coins', coins);
+                    updateUI();
+                    return true;
+                }
+                return false;
+            }
+
+            applyReferralButton.addEventListener('click', function() {
+                const enteredCode = referralCodeInput.value.trim().toUpperCase();
+                if (enteredCode) {
+                    const success = applyReferralCode(enteredCode);
+                    if (success) {
+                        referralMessage.textContent = `Referral code applied! You have earned ${referralReward} KittyCoins.`;
+                    } else {
+                        referralMessage.textContent = `Invalid referral code. Please try again.`;
+                    }
+                } else {
+                    referralMessage.textContent = `Please enter a valid referral code.`;
+                }
+            });
+
+            copyCodeButton.addEventListener('click', function() {
+                referralCodeDisplay.select();
+                document.execCommand('copy');
+                // Remove the alert message
+                // alert('Referral code copied to clipboard!');
+            });
+
+            copyLinkButton.addEventListener('click', function() {
+                shareLink.select();
+                document.execCommand('copy');
+                // Optionally remove the alert message
+                // alert('Referral link copied to clipboard!');
+            });
+
+            // Initial update of the UI
+            updateReferralCode();
+            updateUI();
+        });
+    </script>
+  </body>
+  
+</html>
