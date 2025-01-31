@@ -14,3 +14,6 @@ async function connectToWallet() {
 
 // Call the function
 connectToWallet();
+tonConnectUI.uiOptions = {
+    twaReturnUrl: 'https://t.me/fixercoinbot'
+};
