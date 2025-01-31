@@ -7,35 +7,31 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-  <title>FIXERCOIN GAME</title>
+  <title>replit</title>
   <link href="style.css" rel="stylesheet" type="text/css" />
   <link href="https://fonts.googleapis.com/css2?family=Modak&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-  <script src="script.js"></script>
+  <script src=""></script>
 </body>
 
 </html>
-  
-  
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
- 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>Hello Kitty Clicker</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 <body>
-     <div class="container">
+    <div class="container">
         <h1 id="hello-text"></h1>
-        <p id="coins-text">: 0</p>
+        <p id="coins-text">KittyCoins: 0</p>
         <div id="kitty-coin" onclick="handleKittyClick()"></div>
         <div id="energy-bar-container">
             <div id="energy-bar"></div>
@@ -47,68 +43,132 @@
 
     <!-- Bottom Menu -->
     <div class="bottom-menu">
-        <button data-target="mine-section"><i class="fas fa-gem"></i><span>CLAIM</span></button>
-        <button data-target="invites-section"><i class="fas fa-user-friends"></i><span>INVITE</span></button>
-        <button data-target="tap-section"><i class="fas fa-tachometer-alt"></i><span>BOOST</span></button>
-        <button data-target="earn-section"><i class="fas fa-dollar-sign"></i><span>SUBSCRIBE</span></button>
-        <button data-target="games-section"><i class="fas fa-gamepad"></i><span>SPINNER</span></button>
+        <button data-target="mine-section"><i class="fas fa-gem"></i><span>Mine</span></button>
+        <button data-target="invites-section"><i class="fas fa-user-friends"></i><span>Invites</span></button>
+        <button data-target="tap-section"><i class="fas fa-tachometer-alt"></i><span>Boost</span></button>
+        <button data-target="earn-section"><i class="fas fa-dollar-sign"></i><span>Earn</span></button>
+        <button data-target="games-section"><i class="fas fa-gamepad"></i><span>Games</span></button>
     </div>
 
     <!-- Modals -->
     <div id="mine-section" class="modal-section">
         <div class="modal-content">
             <span class="close">&times;</span>
-            <h2>CLAIM</h2>
+            <h2>Mine</h2>
             <p></p>
             <div id="mines-wrapper">
                 <div class="mine-item">
                     <div class="image-container">
-                        <img src="https://i.postimg.cc/43YjYcYN/bitget-exchange-2-removebg-preview.png" alt="Metal Mine" class="mine-image">
+                        <img src="https://i.pinimg.com/originals/32/0f/f3/320ff31aebd303b7df0a2d1d78b135a5.jpg" alt="Metal Mine" class="mine-image">
                     </div>
                     <div class="button-container">
-                        <button class="mine-button" id="metal-mine">FIXER ON BITGET SOON </button>
-            
+                        <button class="mine-button" id="metal-mine">Metal Mine (Level 1) - 1000 </button>
                     </div>
+                    <p>A basic mine that produces metal. It's a good starting point for your mining operations.</p>
                 </div>
-
-              
+                <div class="mine-item">
+                    <div class="image-container">
+                        <img src="https://i.pinimg.com/originals/56/98/b1/5698b1ae526873962acf3c1c0edb456f.jpg" alt="Aluminum Mine" class="mine-image">
+                    </div>
+                    <div class="button-container">
+                        <button class="mine-button" id="aluminum-mine">Aluminum Mine (Level 1) - 1500 </button>
+                    </div>
+                    <p>Produce Aluminum, a lightweight yet strong metal. A valuable addition to your mining empire.</p>
+                </div>
+                <div class="mine-item">
+                    <div class="image-container">
+                        <img src="https://i.pinimg.com/originals/1c/eb/84/1ceb84ae5f433afb6d9eaba72dba3dce.png" alt="Copper Mine" class="mine-image">
+                    </div>
+                    <div class="button-container">
+                        <button class="mine-button" id="copper-mine">Copper Mine (Level 1) - 2000 </button>
+                    </div>
+                    <p>A source of Copper, a highly conductive metal. Expand your mining expertise.</p>
+                </div>
+                <div class="mine-item">
+                    <div class="image-container">
+                        <img src="https://i.pinimg.com/originals/42/f0/bb/42f0bbd6041b9a6dc85fd47b02cbd786.jpg" alt="Bronze Mine" class="mine-image">
+                    </div>
+                    <div class="button-container">
+                        <button class="mine-button" id="bronze-mine">Bronze Mine (Level 1) - 2500 </button>
+                    </div>
+                    <p>Produce Bronze, a versatile alloy known for its strength and durability. A valuable asset.</p>
+                </div>
+                <div class="mine-item">
+                    <div class="image-container">
+                        <img src="https://i.pinimg.com/originals/5c/38/ef/5c38ef5941c6958a925df8912ba495f0.png" alt="Silver Mine" class="mine-image">
+                    </div>
+                    <div class="button-container">
+                        <button class="mine-button" id="silver-mine">Silver Mine (Level 1) - 3000 </button>
+                    </div>
+                    <p>A source of Silver, a precious metal known for its beauty and conductivity. A lucrative venture.</p>
+                </div>
+                <div class="mine-item">
+                    <div class="image-container">
+                        <img src="https://i.pinimg.com/originals/7a/48/bd/7a48bdf733b75751daf93ca7b920e325.jpg" alt="Diamond Mine" class="mine-image">
+                    </div>
+                    <div class="button-container">
+                        <button class="mine-button" id="diamond-mine">Diamond Mine (Level 1) - 3500 </button>
+                    </div>
+                    <p>Produce Diamonds, the most valuable gemstone. A surefire way to increase your wealth.</p>
+                </div>
+                <div class="mine-item">
+                    <div class="image-container">
+                        <img src="https://i.pinimg.com/originals/7d/66/e9/7d66e9a66b21889dcecc7f1834105db7.jpg" alt="Platinum Mine" class="mine-image">
+                    </div>
+                    <div class="button-container">
+                        <button class="mine-button" id="platinum-mine">Platinum Mine (Level 1) - 4000 </button>
+                    </div>
+                    <p>Produce Platinum, a rare and valuable metal. A prized addition to your collection.</p>
+                </div>
+                <div class="mine-item">
+                    <div class="image-container">
+                        <img src="https://i.pinimg.com/originals/a7/7d/30/a77d30080b6d094bf05a7046d8073aba.jpg" alt="Diamond Mine" class="mine-image">
+                    </div>
+                    <div class="button-container">
+                        <button class="mine-button" id="diamond-mine">Diamond Mine (Level 1) - 4500 </button>
+                    </div>
+                    <p>Unleash the power of Diamonds, the most valuable gemstone. A symbol of wealth and prestige!</p>
+                </div>
+            </div>
+        </div>
+    </div>
     <div id="invites-section" class="modal-section">
         <div class="modal-content">
             <span class="close">&times;</span>
-            <h2>INVITE</h2>
-            <p>INVITE FRIENDS AND EARN REWARDS!</p>
+            <h2>Invites</h2>
+            <p>Invite friends and earn rewards!</p>
             <div class="referral-form">
-                <label for="referral-code">ENTER YOUR REFERRAL CODE:</label>
+                <label for="referral-code">Enter your referral code:</label>
                 <input type="text" id="referral-code" placeholder="Referral code">
-                <button id="apply-referral" class="common-button">APPLY</button>
+                <button id="apply-referral" class="common-button">Apply</button>
                 <p id="referral-message"></p>
             </div>
             <div class="referral-link">
-                <p>YOUR REFERRAL CODE:</p>
+                <p>Your referral code:</p>
                 <input type="text" id="referral-code-display" readonly>
-                <button id="copy-code" class="common-button">COPY CODE</button>
+                <button id="copy-code" class="common-button">Copy Code</button>
             </div>
             <div class="referral-link">
-                <p>SHARE THIS LINK:</p>
-                <input type="text" id="share-link" value="t.me/fixercoinbot" readonly>
-                <button id="copy-link" class="common-button">COPY LINK</button>
+                <p>Share this link:</p>
+                <input type="text" id="share-link" value="t.me/HelloKittyClickerBot" readonly>
+                <button id="copy-link" class="common-button">Copy Link</button>
             </div>
-            <div classOPY ferral-reward">
-                <p>REWARD FOR INVITING : 1000</p>
+            <div class="referral-reward">
+                <p>Reward for inviting a friend: 1000</p>
             </div>
         </div>
     </div>
    <br> <div id="tap-section" class="modal-section">
         <div class="modal-content">
             <span class="close">&times;</span>
-            <h2>BOOST</h2>
+            <h2>Boost</h2>
             <div id="improvements">
-                <div class="booster-label">FREE DAILY BOOSTERS</div>
-                <button id="full-tank" data-cost="200" class="common-button"><i class="fas fa-gas-pump"></i> FULK TANK</button>
-                <div class="booster-label">BOOSTERS</div>
-                <button id="multitap" data-cost="150" class="common-button"><i class="fas fa-tasks"></i> MULTITAP</button>
-                <button id="energy-limit" data-cost="300" class="common-button"><i class="fas fa-battery-full"></i> ENERGY LIMIT</button>
-                <button id="recharging-speed" data-cost="250" class="common-button"><i class="fas fa-clock"></i> RECHARGING SPEED</button>
+                <div class="booster-label">Free daily boosters</div>
+                <button id="full-tank" data-cost="200" class="common-button"><i class="fas fa-gas-pump"></i> Full Tank</button>
+                <div class="booster-label">Boosters</div>
+                <button id="multitap" data-cost="150" class="common-button"><i class="fas fa-tasks"></i> Multitap</button>
+                <button id="energy-limit" data-cost="300" class="common-button"><i class="fas fa-battery-full"></i> Energy Limit</button>
+                <button id="recharging-speed" data-cost="250" class="common-button"><i class="fas fa-clock"></i> Recharging Speed</button>
                 <p id="improvement-message"></p>
             </div>
         </div>
@@ -116,28 +176,27 @@
     <div id="earn-section" class="modal-section">
         <div class="modal-content">
             <span class="close">&times;</span>
-            <h2>JOIN CHANNEL</h2>
-            <p></p>
+            <h2>Earn</h2>
+            <p>Earn functionality here.</p>
 
             <!-- Subscription Section -->
             <div id="telegram-subscribe-section">
-                <h3>SUBSCRIBE AND COLLECT REWARD </h3>
-                <a href="https://t.me/fixercoinairdrop" target="_blank" id="verify-subscription" class="common-button">FIXER TELEGRAM CLAIM </a> 
-               <a href="https://t.me/fixercoinchat" target="_blank" id="verify-subscription" class="common-button">FIXER TELEGRAM TALKS </a>
-              <p id="subscription-message"></p>
+                <h3>Subscribe to our Telegram channel for a reward!</h3>
+                <a href="https://t.me/fixercoin" target="_blank" id="verify-subscription" class="common-button">Join Telegram Channel</a> 
+                <p id="subscription-message"></p>
             </div>
         </div>
     </div>
     <div id="games-section" class="modal-section">
         <div class="modal-content">
             <span class="close">&times;</span>
-            <h2>SPIN NOW </h2>
+            <h2>Games</h2>
             <div id="roulette-wrapper">
                 <div id="roulette-container">
                     <div id="roulette"></div>
                 </div>
-                <div id="roulette-info">CLAIM POINT : 0</div>
-                <button id="spin-roulette-btn" class="common-button">SPIN TO CLAIM</button>
+                <div id="roulette-info">Winnings: 0</div>
+                <button id="spin-roulette-btn" class="common-button">Spin the Wheel</button>
             </div>
         </div>
     </div>
@@ -184,7 +243,7 @@
             const coinsText = document.getElementById('coins-text');
             const energyBar = document.getElementById('energy-bar');
             const energyText = document.getElementById('energy-text');
-            const kittycoin = document.getElementById('kitty-coin');
+            const kittyCoin = document.getElementById('kitty-coin');
             const fullTankCost = 200;
             const multitapCost = 150;
             const energyLimitCost = 300;
@@ -194,7 +253,7 @@
 
             // Update UI with saved data
             function updateUI() {
-                coinsText.textContent = `kitty coin: ${coins}`;
+                coinsText.textContent = `KittyCoins: ${coins}`;
                 energyBar.style.width = `${(energy / maxEnergy) * 100}%`;
                 energyText.textContent = `Energy: ${Math.round((energy / maxEnergy) * 100)}%`;
                 localStorage.setItem('coins', coins);
@@ -204,7 +263,7 @@
             }
 
             // Handle kitty click event
-            function handlekittyClick() {
+            function handleKittyClick() {
                 if (energy > 0) {
                     coins += 1; // Increase coins by 1 per click
                     energy -= energyLossPerClick; // Decrease energy
@@ -330,4 +389,32 @@
   
 </html>
 
+<script>
 
+
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Ініціалізація облікових даних
+    const accountId = localStorage.getItem('accountId') || generateUniqueId();
+    localStorage.setItem('accountId', accountId);
+
+    let coins = parseInt(localStorage.getItem(`${accountId}_coins`)) || 0;
+    let energy = parseInt(localStorage.getItem(`${accountId}_energy`)) || 1000;
+    let energyLimit = parseInt(localStorage.getItem(`${accountId}_energyLimit`)) || 1000;
+    const energyCostPerClick = 5;
+
+    const coinsText = document.getElementById('coins-text');
+    const energyBar = document.getElementById('energy-bar');
+    const energyText = document.getElementById('energy-text');
+    const kittyCoin = document.getElementById('kitty-coin');
+    const fullTankButton = document.getElementById('full-tank');
+
+    let clickUpgradeMultiplier = parseInt(localStorage.getItem(`${accountId}_clickUpgradeMultiplier`)) || 1;
+    let multitapClicks = parseInt(localStorage.getItem(`${accountId}_multitapClicks`)) || 1;
+    let rechargingSpeed = parseInt(localStorage.getItem(`${accountId}_rechargingSpeed`)) || 5;
+    let fullTankUsageCount = parseInt(localStorage.getItem(`${accountId}_fullTankUsageCount`)) || 0;
+    const maxFullTankUsage = 6;
+    let lastFullTankResetTime = new Date(localStorage.getItem(`${accountId}_lastFullTankResetTime`)) || new Date();
+
+    l
