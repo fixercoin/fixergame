@@ -38,7 +38,21 @@
 
     <script src="script.js"></script>
 
+<script>
+        // JavaScript for handling modal visibility
+        const buttons = document.querySelectorAll('.bottom-menu button');
+        const modals = document.querySelectorAll('.modal-section');
+        const closeButtons = document.querySelectorAll('.close');
 
+        buttons.forEach(button => {
+            button.addEventListener('click', () => {
+                const targetId = button.getAttribute('data-target');
+                const targetModal = document.getElementById(targetId);
+                if (targetModal) {
+                    targetModal.style.display = 'flex'; // Show the modal
+                }
+            });
+        });
 
     
 </script>
