@@ -54,16 +54,7 @@ h1 {
 
 
 }
-.btn {
-    cursor: pointer;
-    border: 1px solid #3498db;
-    background-color: transparent;
-    height: 50px;
-    width: 200px;
-    color: #3498db;
-    font-size: 1.5em;
-    box-shadow: 0 6px 6px rgba(0, 0, 0, 0.6);
-    }
+
 #connect-wallet, #join-telegram {
 
     display: block;
@@ -187,4 +178,8 @@ h1 {
     }
 
     }
-
+/* Button outline */
+.button-block a.sqs-block-button-element[href="/store"] {
+    background: transparent !important;
+    border: 1px solid white;
+}
