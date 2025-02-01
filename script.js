@@ -1,4 +1,4 @@
-let balance = 1000;
+let balance = 0;
 
 let tapCount = 0;
 
