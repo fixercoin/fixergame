@@ -1,10 +1,10 @@
-let balance =  0;
+let balance = 0;
 
-let tapcount = 0;
+let tapCount = 0;
 
 const MAX_TAPS = 50000;
 
-const COINS_FOR_JOINING_TELEGRAM = 1000;
+const COINS_FOR_JOINING_TELEGRAM = 2000;
 
 document.getElementById('tap-coin').addEventListener('click', () => {
 
@@ -61,8 +61,3 @@ document.getElementById('join-telegram').addEventListener('click', () => {
     document.getElementById('balance').innerText = balance;
 
 });
-
-
-
-
-
