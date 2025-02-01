@@ -68,7 +68,24 @@ closeButtons.forEach(closeButton => {
                 }
             });
         });
-    
+                    energyText.textContent = `Energy: ${Math.round((energy / maxEnergy) * 100)}%`;
+                localStorage.setItem('coins', coins);
+                localStorage.setItem('energy', energy);
+                localStorage.setItem('referralCode', referralCode);
+                adjustInputWidth();
+            }
+
+            // Handle kitty click event
+            function handleKittyClick() {
+                if (energy > 0) {
+                    coins += 1; // Increase coins by 1 per click
+                    energy -= energyLossPerClick; // Decrease energy
+                    if (energy < 0) energy = 0;
+                    updateUI();
+                } else {
+                    alert('Not enough energy!');
+                }
+            }
 </script>
 </body>
 
