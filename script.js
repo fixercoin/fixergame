@@ -1,6 +1,6 @@
 let balance =  0;
 
-let tapcoin = 0;
+let tapcount = 0;
 
 const MAX_TAPS = 50000;
 
