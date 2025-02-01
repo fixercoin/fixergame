@@ -1,102 +1,41 @@
 <!DOCTYPE html>
-
 <html lang="en">
-
 <head>
-
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>FIXER COIN</title>
-
     <link rel="stylesheet" href="styles.css">
-
+    <title>FIXER COIN</title>
 </head>
-
 <body>
-
     <div class="container">
-
-        <h1>FIXER COIN</h1>
-
-        <p class="balance">BALANCE : <span id="balance">0</span> COINS</p>
-
-        <p>50000 = 0.1 TON</p>
-
+    <h1>FIXER COIN</h1>
+        <h5>TOTAL COINS : <span id="balance">0.0000</span> </h5>
         <img src="https://i.postimg.cc/2jWtxFzs/IMG-20250201-134515-676-removebg-preview.png" id="tap-coin" alt="Tap Coin">
+        <button id="mineButton" style="width: 120px">MINE</button>
+        <button style="width: 120px" id="join-telegram" onclick="window.open('https://t.me/fixercoinbot', '_blank')"> SUBSCRIBE </button>
 
-        <button id="connect-wallet">CONNECT YOUR TON WALLET</button>
 
-        <input type="text" id="wallet-address" placeholder="Enter your TON wallet address">
-
-        <button id="join-telegram" onclick="window.open('https://t.me/fixercoinbot', '_blank')">JOIN TELEGRAM GROUP</button>
-
-        <p class="launch-date">LAUNCHING DATE : COMING SOON</p>
 
     </div>
 
+
+        
+        
+        
+        
+        
+    
+
+    
+
     <script src="script.js"></script>
 
-<script>
-        // JavaScript for handling modal visibility
-        const buttons = document.querySelectorAll('.bottom-menu button');
-        const modals = document.querySelectorAll('.modal-section');
-        const closeButtons = document.querySelectorAll('.close');
 
-        buttons.forEach(button => {
-            button.addEventListener('click', () => {
-                const targetId = button.getAttribute('data-target');
-                const targetModal = document.getElementById(targetId);
-                if (targetModal) {
-                    targetModal.style.display = 'flex'; // Show the modal
-                }
-            });
-        });
-closeButtons.forEach(closeButton => {
-            closeButton.addEventListener('click', () => {
-                const modalSection = closeButton.closest('.modal-section');
-                modalSection.style.display = 'none'; // Hide the modal
-            });
-        });
-
-        // Close modals when clicking outside of them
-        window.addEventListener('click', (event) => {
-            modals.forEach(modal => {
-                if (event.target === modal) {
-                    modal.style.display = 'none'; // Hide the modal
-                }
-            });
-        });
-    {
-                localStorage.setItem('coins', coins);
-                
-                
-        
-            }
-
-            // Handle kitty click event
-            function handleKittyClick() {
-                if (energy > 0) {
-                    coins += 1; // Increase coins by 1 per click
-                    energy -= energyLossPerClick; // Decrease energy
-                    if (energy < 0) energy = 0;
-                    updateUI();
-                } else {
-                    alert('Not enough energy!');
-                }
-            }
- 
 
     
-            });
-
-    
-        
-            
-    
-    </script>
-</script>
 </body>
-
 </html>
+    
+    
+
+  
