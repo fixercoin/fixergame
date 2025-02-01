@@ -1,8 +1,8 @@
-let balance = 0;
+let balance = 1000;
 
 let tapCount = 0;
 
-const MAX_TAPS = 50000;
+const MAX_TAPS = 5000;
 
 const COINS_FOR_JOINING_TELEGRAM = 2000;
 
