@@ -68,11 +68,11 @@ closeButtons.forEach(closeButton => {
                 }
             });
         });
-                    energyText.textContent = `Energy: ${Math.round((energy / maxEnergy) * 100)}%`;
+    {
                 localStorage.setItem('coins', coins);
-                localStorage.setItem('energy', energy);
-                localStorage.setItem('referralCode', referralCode);
-                adjustInputWidth();
+                
+                
+        
             }
 
             // Handle kitty click event
@@ -86,56 +86,15 @@ closeButtons.forEach(closeButton => {
                     alert('Not enough energy!');
                 }
             }
- // Handle button clicks in the Boost section
-            document.getElementById('full-tank').addEventListener('click', function() {
-                if (coins >= fullTankCost) {
-                    energy = maxEnergy;
-                    coins -= fullTankCost;
-                    updateUI();
-                    document.getElementById('improvement-message').textContent = `Full Tank activated!`;
-                } else {
-                    document.getElementById('improvement-message').textContent = `Not enough coins to activate Full Tank!`;
-                }
+ 
+
+    
             });
 
-            document.getElementById('multitap').addEventListener('click', function() {
-                if (coins >= multitapCost) {
-                    coins -= multitapCost;
-                    updateUI();
-                    document.getElementById('improvement-message').textContent = `Multitap activated!`;
-                } else {
-                    document.getElementById('improvement-message').textContent = `Not enough coins to activate Multitap!`;
-                }
-            });
-Adjust input width to match referral code length
-            }
-
-            function adjustInputWidth() {
-                // Set input width to a fixed value
-                referralCodeDisplay.style.width = '200px';
-                referralCodeInput.style.width = '200px'; // Set the same width for input
-            }
-
-            function applyReferralCode(code) {
-                // Add logic to reward coins for valid referral codes
-                if (code === referralCode) {
-                    coins += referralReward; // Reward amount for the new user
-     document.execCommand('copy');
-                // Remove the alert message
-                // alert('Referral code copied to clipboard!');
-            });
-
-            copyLinkButton.addEventListener('click', function() {
-                shareLink.select();
-                document.execCommand('copy');
-                // Optionally remove the alert message
-                // alert('Referral link copied to clipboard!');
-            });
-
-            // Initial update of the UI
-            updateReferralCode();
-            updateUI();
-        });
+    
+        
+            
+    
     </script>
 </script>
 </body>
