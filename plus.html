@@ -107,8 +107,36 @@ closeButtons.forEach(closeButton => {
                     document.getElementById('improvement-message').textContent = `Not enough coins to activate Multitap!`;
                 }
             });
+Adjust input width to match referral code length
+            }
 
-    
+            function adjustInputWidth() {
+                // Set input width to a fixed value
+                referralCodeDisplay.style.width = '200px';
+                referralCodeInput.style.width = '200px'; // Set the same width for input
+            }
+
+            function applyReferralCode(code) {
+                // Add logic to reward coins for valid referral codes
+                if (code === referralCode) {
+                    coins += referralReward; // Reward amount for the new user
+     document.execCommand('copy');
+                // Remove the alert message
+                // alert('Referral code copied to clipboard!');
+            });
+
+            copyLinkButton.addEventListener('click', function() {
+                shareLink.select();
+                document.execCommand('copy');
+                // Optionally remove the alert message
+                // alert('Referral link copied to clipboard!');
+            });
+
+            // Initial update of the UI
+            updateReferralCode();
+            updateUI();
+        });
+    </script>
 </script>
 </body>
 
