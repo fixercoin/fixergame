@@ -1,6 +1,7 @@
-let balance = 1000;
-
-let tapCount = 0;
+let balance = parseFloat(localStorage.getItem('balance')) || 1000; // Initialize balance from local storage
+let clickBonus = 1; // Default click bonus
+let isBonusActive = false; // Track if bonus is active
+let bonusDuration = 0; // Time left for bonus
 
 const MAX_TAPS = 50000;
 
@@ -61,10 +62,7 @@ document.getElementById('join-telegram').addEventListener('click', () => {
     document.getElementById('balance').innerText = balance;
 
 });
-let balance = parseFloat(localStorage.getItem('balance')) || 0.0000; // Initialize balance from local storage
-let clickBonus = 1; // Default click bonus
-let isBonusActive = false; // Track if bonus is active
-let bonusDuration = 0; // Time left for bonus
+
 
 // Daily bonus logic
 const lastBonusDate = localStorage.getItem('lastBonusDate');
