@@ -69,7 +69,7 @@ const lastBonusDate = localStorage.getItem('lastBonusDate');
 const today = new Date().toISOString().split('T')[0];
 
 if (lastBonusDate !== today) {
-    balance += 10; // Add daily bonus
+    balance += 1000; // Add daily bonus
     localStorage.setItem('lastBonusDate', today); // Update last bonus date
 }
 
