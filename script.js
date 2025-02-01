@@ -1,4 +1,4 @@
-let balance = parseFloat(localStorage.getItem('balance')) || 0; // Initialize balance from local storage
+let balance =  0;
 
 let tapcoin = 0;
 const MAX_TAPS = 50000;
@@ -61,7 +61,7 @@ document.getElementById('join-telegram').addEventListener('click', () => {
 
 });
 
-
+parseFloat(localStorage.getItem('balance'))|| 0; // Initialize balance from local storage
 // Daily bonus logic
 const lastBonusDate = localStorage.getItem('lastBonusDate');
 const today = new Date().toISOString().split('T')[0];
