@@ -1,6 +1,7 @@
 let balance =  0;
 
 let tapcoin = 0;
+
 const MAX_TAPS = 50000;
 
 const COINS_FOR_JOINING_TELEGRAM = 1000;
@@ -62,21 +63,6 @@ document.getElementById('join-telegram').addEventListener('click', () => {
 });
 
 
-// Daily bonus logic
-const lastBonusDate = localStorage.getItem('lastBonusDate');
-const today = new Date().toISOString().split('T')[0];
 
-if (lastBonusDate !== today) {
-    balance += 1000; // Add daily bonus
-    localStorage.setItem('lastBonusDate', today); // Update last bonus date
-}
-
-document.getElementById('balance').innerText = balance.toFixed(4); // Update displayed balance
-
-document.getElementById('mineButton').addEventListener('click', () => {
-    balance += 1; // 
-    localStorage.setItem('balance', balance); // Save balance to local storage
-    document.getElementById('balance').innerText = balance.toFixed(4); // Update displayed balance
-});
 
 
