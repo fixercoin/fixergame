@@ -1,8 +1,8 @@
-let balance = parseFloat(localStorage.getItem('balance')) || 1000; // Initialize balance from local storage
+let balance = parseFloat(localStorage.getItem('balance')) || 0; // Initialize balance from local storage
 let clickBonus = 1; // Default click bonus
 let isBonusActive = false; // Track if bonus is active
 let bonusDuration = 0; // Time left for bonus
-
+let tapcoin = 0;
 const MAX_TAPS = 50000;
 
 const COINS_FOR_JOINING_TELEGRAM = 1000;
