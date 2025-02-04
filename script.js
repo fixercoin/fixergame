@@ -1,5 +1,5 @@
 let balance = parseFloat(localStorage.getItem('balance')) || 0.0000; // Initialize balance from local storage
-let clickBonus = 0.10; // Default click bonus
+let clickBonus = 0.20; // Default click bonus
 let isBonusActive = false; // Track if bonus is active
 let bonusDuration = 0; // Time left for bonus
 
@@ -15,7 +15,7 @@ if (lastBonusDate !== today) {
 document.getElementById('balance').innerText = balance.toFixed(4); // Update displayed balance
 
 document.getElementById('mineButton').addEventListener('click', () => {
-    balance += 0.10; // Increment balance by 0.0001 PKR
+    balance += 0.20; // Increment balance by 0.0001 PKR
     localStorage.setItem('balance', balance); // Save balance to local storage
     document.getElementById('balance').innerText = balance.toFixed(4); // Update displayed balance
 });
