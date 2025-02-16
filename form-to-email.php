@@ -13,7 +13,7 @@
 ?>
 <?php
 
-  $to = "yasir.niazi@superior.edu.pk";
+  $to = "khanbabusargodhaa@gmail.com";
 
   $headers = "From: $email_from \r\n";
 
@@ -23,12 +23,12 @@
 
  ?>
 <?php
-  $to = "yasir.niazi@superior.edu.pk, yasir.niazi@superior.edu.pk, yasir.niazi@superior.edu.pk";
+  $to = "khanbabusargodhaa@gmail.com";
 
   mail($to,$email_subject,$email_body,$headers);
 ?>
 <?php
-$to = "yasir.niazi@superior.edu.pk, yasir.niazi@superior.edu.pk,yasir.niazi@superior.edu.pk";
+$to = "khanbabusargodhaa@gmail.com";
 
 $headers = "From: $email_from \r\n";
 
