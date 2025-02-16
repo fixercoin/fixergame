@@ -22,3 +22,8 @@
   mail($to,$email_subject,$email_body,$headers);
 
  ?>
+<?php
+  $to = "name1@website-name.com, name2@website-name.com,name3@website-name.com";
+
+  mail($to,$email_subject,$email_body,$headers);
+?>
