@@ -75,59 +75,29 @@
 
         
 
-    <div class="container">
-        
-        <p></p>
-        <p class='submitMsg'></p>
 
-        <div id = "alert"></div>
+    <!DOCTYPE html>
+<title>Feedback Form</title>
 
-        <form id = "booking-form" onsubmit = "doBook(event);">
-            <input class="form" type="text" name="name" id="name" placeholder="Enter your name" required>
-            <input class="form" type="number" name="age" id="age" placeholder="Enter your Age" required>
-            <input class="form" type="text" name="gender" id="gender" placeholder="Enter your gender(MALE/FEMALE)" required>
-            <input class="form" type="email" name="email" id="email" placeholder="Enter your valid Email id" required>
-            <input class="form" type="phone" name="phone" id="phone" placeholder="Enter your phone" required>
-            <textarea name="desc" id="desc" cols="30" rows="10" placeholder="Enter anything else you want to add"></textarea>
-            <button class="btn">Submit</button>
-            <button class="btn">Reset</button>
-        </form>
-
-
-    </div>
-    <script src="index.js"></script>
-    <script type = "text/javascript">
-       var reference = document.getElementById("alert");
-       var form = document.getElementById("booking-form");
-       
-       function doTransfer(event) {
-            event.preventDefault();
-
-            if(form["name"].value.length < 5) {
-                error = "<span>Name must be at least five characters long!</span>";
-                reference.innerHTML = error;
-            } else if(form["name"].value.length > 30) {
-                error = "<span>Name too long, must be at most thirty characters long!</span>";
-                reference.innerHTML = error;
-            } else if(form["age"].value > 10 && form["age"].value < 50) {
-                error = "<span>Age must be a number in between ten to fifty!</span>";
-                reference.innerHTML = error;
-            } else if(form["gender"].value != "MALE" && form["gender"].value != "FEMALE") {
-                error = "<span>Gender must be in acceptabe format(MALE/FEMALE)!</span>";
-                reference.innerHTML = error;
-            } else if(form["phone"].value.length != 10) {
-                error = "<span>Phone number must be valid!</span>";
-                reference.innerHTML = error;               
-            } else {
-                $.ajax({
-                    type: "POST",
-                    url: "index.php",
-                    data: "name=" + form["name"].value + "&gender=" + form["gender"].value + "&age=" + form["age"].value + "&email=" + form["email"].value + "&phone=" + form["phone"].value + "&desc=" + form["desc"].value,
-                    success: function() {}
-                });
-            }
-        }
-    </script>
+<h1>Feedback Form</h1>
+<form method="post" action="send_mail.php">
+<p>
+<label>First Name
+<input type="text" name="first_name" required>
+</label> 
+</p>
+<p>
+<label>Email 
+<input type="email" name="email_address">
+</label>
+</p>
+<p>
+<label>Comments
+<textarea name="comments" maxlength="500"></textarea>
+</label>
+</p>
+<p><button>Submit the form</button></p>
+</form>
 
     
 
