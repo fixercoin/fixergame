@@ -2,13 +2,13 @@
 <div class="form">
 	
 	<header class="form__header">
-		<h2 class="form__title">Awesome Form</h2>
-		<p class="form__instruction">Hey there! Let’s get to know each other. Please select one of the options below each question :D</p>
+		<h2 class="form__title"></h2>
+		<p class="form__instruction"></p>
 	</header>
 	
 	<form>
 		<fieldset class="form__options">
-			<legend class="form__question">What is your ideal match?
+			<legend class="form__question">
 </legend>
 			<p class="form__answer"> 
 				<input type="radio" name="match" id="match_1" value="guy" checked> 
@@ -93,7 +93,7 @@
 				<input type="radio" name="match" id="match_4" value="bacon"> 
 				<label for="match_4">
 					<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-    <title>Icon Bacon</title>
+    <title></title>
     <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
         <g id="Bacon" stroke="#FFFFFF" stroke-width="2">
             <path d="M26.7421991,11 L44.6934895,11 C44.4642635,11.8890038 44.2357088,12.8521738 44.0217879,13.8601319 C43.6686334,15.5241344 43.3893164,17.1510083 43.2115625,18.6847916 C43.0733938,19.8770066 43,20.9868603 43,22 C43,24.2953026 43.2842672,25.4906009 44.0735181,27.4335995 C44.0844886,27.460605 44.0844886,27.460605 44.0954191,27.4875117 C44.7810245,29.1753309 45,30.0881983 45,32 C45,33.9378028 44.7782311,34.8618399 44.0715233,36.6286093 C43.2782311,38.6118399 43,39.7711361 43,42 C43,44.2288639 43.2782311,45.3881601 44.0715233,47.3713907 C44.7782311,49.1381601 45,50.0621972 45,52 C45,53.9378028 44.7782311,54.8618399 44.0715233,56.6286093 C43.2782311,58.6118399 43,59.7711361 43,62 C43,64.2288639 43.2782311,65.3881601 44.0715233,67.3713907 C44.7782311,69.1381601 45,70.0621972 45,72 C45,73.9648865 44.746648,75.105138 44.0622346,76.9533258 C43.9836128,77.1650796 43.9373676,77.2895732 43.9041387,77.3796045 C43.2582243,79.1296615 43,80.2671404 43,82 C43,83.9585976 43.3955175,85.955804 44.052921,87.8954052 C44.1840226,88.2822071 44.320539,88.6511962 44.4595146,89 L26.5929514,89 C26.5892869,88.9927054 26.5855915,88.9853358 26.581868,88.9778913 C26.3649897,88.5442782 26.1465065,88.0375185 25.9417268,87.4642166 C25.35344,85.8172472 25,83.9792187 25,82 C25,80.1782532 25.2200313,79.2521617 25.8993173,77.520192 C25.9150979,77.4799625 25.9150979,77.4799625 25.9309539,77.4395415 C26.7154768,75.4393193 27,74.230284 27,72 C27,69.7711361 26.7217689,68.6118399 25.9284767,66.6286093 C25.2217689,64.8618399 25,63.9378028 25,62 C25,60.0621972 25.2217689,59.1381601 25.9284767,57.3713907 C26.7217689,55.3881601 27,54.2288639 27,52 C27,49.7711361 26.7217689,48.6118399 25.9284767,46.6286093 C25.2217689,44.8618399 25,43.9378028 25,42 C25,40.0621972 25.2217689,39.1381601 25.9284767,37.3713907 C26.7217689,35.3881601 27,34.2288639 27,32 C27,29.8871932 26.7324112,28.7812593 26.0172482,27.1476206 C25.9663262,27.0314769 25.9663262,27.0314769 25.9163155,26.9172826 C25.2445626,25.3801954 25,24.3093799 25,22 C25,21.7371426 25.0042052,21.4703618 25.0125216,21.1998453 C25.0822756,18.9308899 25.4337302,16.4859615 25.9765721,14.0224508 C26.1910602,13.0490666 26.4208368,12.1406578 26.6503105,11.3229001 C26.6827758,11.207206 26.713475,11.0994592 26.7421991,11 Z" id="Rectangle"></path>
@@ -114,20 +114,7 @@
 	</form>
 </div>
 
-<footer>
-	<h2 class="footer__title">About this pen:</h2>
-	<h3 class="footer__subtitle">Properly styling a form</h3>
-	<p class="footer__parragraph">I made this pen to practice writing more semantic and accesible html. I previously made a pen about: <a target="_blank" href="https://codepen.io/AngelaVelasquez/full/Eypnq/">CSS Radio buttons</a>. That's why I think a form could be a great start for me to practice and learn how to write better HTML.</p>
-	
-	<p class="footer__parragraph">References:</p>
-	
-	<ul class="footer__list">
-		<li><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Forms/How_to_structure_an_HTML_form">Definitions and usage on MDN</a></li>
-		<li><a target="_blank" href="https://codepen.io/SaraSoueidan/pen/40433575e3d0d026c7d9c00eb45522a1?editors=110">Styling checkboxes with SVG by Sara Soueidan</a></li>
-	</ul>
 
-	<p class="copyright">Awesome pen made by <a target="_blank" href="https://codepen.io/AngelaVelasquez">Angela</a></p>
-</footer>
 <style>
 /* Font from Google fonts */
 
