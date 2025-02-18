@@ -9,7 +9,7 @@
 	<i></i>
 	<i></i>
 	<i></i>	
-	<span>Style 1</span>
+	<span>META MASK WALLET</span>
 </div>
 <div class="btn style-2">	
 	<i></i>
@@ -22,7 +22,7 @@
 	<i></i>
 	<i></i>
 	<i></i>
-	<span>Style 2</span>
+	<span>TRUST WALLET</span>
 </div>
 <div class="btn style-3">
 	<i></i>
@@ -35,7 +35,7 @@
 	<i></i>
 	<i></i>
 	<i></i>
-	<span>Style 3</span>
+	<span>BINANCE WALLET</span>
 </div>
 <div class="btn style-4">
 	<i></i>
@@ -48,34 +48,10 @@
 	<i></i>
 	<i></i>
 	<i></i>
-	<span>Style 4</span>
+	<span>FIXER WALLET</span>
 </div>
-<div class="btn style-5">
-	<i></i>
-	<i></i>
-	<i></i>
-	<i></i>
-	<i></i>
-	<i></i>
-	<i></i>
-	<i></i>
-	<i></i>
-	<i></i>
-	<span>Style 5</span>
-</div>
-<div class="btn style-6">
-	<i></i>
-	<i></i>
-	<i></i>
-	<i></i>
-	<i></i>
-	<i></i>
-	<i></i>
-	<i></i>
-	<i></i>
-	<i></i>
-	<span>Style 6</span>
-</div>
+
+
 <style>
 :root {
 	--primary: 0, 0%, 100%;
