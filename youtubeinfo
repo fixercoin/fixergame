@@ -1,4 +1,12 @@
-<div class='card' contenteditable>(semi)transparent card + rounded corners + rainbow border + glow</div>
+<div class='card' contenteditable>
+<button onclock=window.open()>METAMASK WALLET</button>
+<br>
+<button onclock=window.open()>TRUST WALLET</button>
+<br>
+<button onclock=window.open()>BINANCE WALLET</button>
+<br>
+<button onclock=window.open()>FIXER WALLET</button>
+</div>
 <style>
 
 // the rainbow palette
@@ -74,7 +82,7 @@ html { min-height: 100% }
 
 body {
 	background: 
-		url(https://images.unsplash.com/photo-1735542214686-a745d3684c39?w=1400) 
+		url() 
 			5%/ cover #212121;
 	background-blend-mode: multiply;
 	color: #dedede;
