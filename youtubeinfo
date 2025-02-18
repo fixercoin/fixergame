@@ -106,7 +106,7 @@ i:nth-child(10) {transition-delay: .2s;}
 span {
 	position: absolute;
 	width: 100%;	
-	font-size: 14px;
+	font-size: 18px;
 	font-weight: 800;
 	line-height: var(--h);
 	letter-spacing: 4px;
