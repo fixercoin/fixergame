@@ -9,6 +9,13 @@ var chartYAxisSet = [];
 //We can dynamically set this ChartData using API as well
 var chartData = [
   {
+    quater: "0",
+    revenue: 500,
+    expenses: 1,
+    get calProfit() {
+      return this.revenue - this.expenses;
+    }
+  },
     quater: "DAY1",
     revenue: 1.2,
     expenses: 1,
@@ -116,7 +123,7 @@ function renderChart(chartData) {
         chartData[i].revenue +
         "&#013;Expenses: $" +
         chartData[i].expenses +
-        '"><span class="tooltip">($):' +
+        '"><span class="tooltip">' +
         chartData[i].calProfit +
         '</span></span></div><span class="label"><a href="">' +
         chartData[i].quater +
