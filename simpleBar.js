@@ -9,33 +9,57 @@ var chartYAxisSet = [];
 //We can dynamically set this ChartData using API as well
 var chartData = [
   {
-    quater: "Q1",
-    revenue: 18450,
-    expenses: 16500,
+    quater: "DAY1",
+    revenue: 0.80,
+    expenses: 0.10,
     get calProfit() {
       return this.revenue - this.expenses;
     }
   },
   {
-    quater: "Q2",
-    revenue: 3430,
-    expenses: 3420,
+    quater: "DAY2",
+    revenue: 1.40,
+    expenses: 0.10,
     get calProfit() {
       return this.revenue - this.expenses;
     }
   },
   {
-    quater: "Q3",
-    revenue: 3225,
-    expenses: 3100,
+    quater: "DAY3",
+    revenue: 1.50,
+    expenses: 0.10,
+    get calProfit() {
+      return this.revenue - this.expenses;
+    }
+  },
+    {
+    quater: "DAY5",
+    revenue: 3.50,
+    expenses: 0.10,
+    get calProfit() {
+      return this.revenue - this.expenses;
+    }
+  },
+    {
+    quater: "DAY6",
+    revenue: 2.50,
+    expenses: 0.10,
+    get calProfit() {
+      return this.revenue - this.expenses;
+    }
+  },
+    {
+    quater: "DAY7",
+    revenue: 1.50,
+    expenses: 0.10,
     get calProfit() {
       return this.revenue - this.expenses;
     }
   },
   {
-    quater: "Q4",
-    revenue: 3500,
-    expenses: 3700,
+    quater: "DAY8",
+    revenue: 2.0,
+    expenses: 0.10,
     get calProfit() {
       return this.revenue - this.expenses;
     }
