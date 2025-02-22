@@ -10,7 +10,7 @@ var chartYAxisSet = [];
 var chartData = [
   {
  quater: "DAY1",
-    revenue: 500,
+    revenue: 100,
     expenses: 1,
     get calProfit() {
       return this.revenue - this.expenses;
