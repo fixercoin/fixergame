@@ -1,6 +1,6 @@
 /*
-Author: Ansul Gupta
-Copyright: MIT License
+Author: niazi
+Copyright: fixer coin
 */
 
 var maxRageYAxis;
