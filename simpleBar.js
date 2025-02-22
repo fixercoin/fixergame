@@ -1,6 +1,6 @@
 /*
 Author: niazi
-Copyright: fixer coin
+Copyright: fixercoin
 */
 
 var maxRageYAxis;
