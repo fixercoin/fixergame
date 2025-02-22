@@ -1,24 +1,16 @@
-<div class="chart-container">
-    <canvas id="chart"></canvas>
-</div>
+<script src="https://cdn.amcharts.com/lib/4/core.js"></script>
+<script src="https://cdn.amcharts.com/lib/4/charts.js"></script>
+<script src="https://cdn.amcharts.com/lib/4/themes/animated.js"></script>
+<h1 onload="setTimer()"> Candle chart</h1>
+<p id="t1"> tt </p>
+<button type="button" onclick="ini()" >Update</button>
+
+<div id="chartdiv"></div>
+<div ><p id="d1"></p></div>
 
 
 <style>
-  body {  
-  background: #1D1F20;
-  padding: 16px;
-}
-
-canvas {
-  border: 1px dotted red;
-}
-
-.chart-container {
-  position: relative;
-  margin: auto;
-  height: 80vh;
-  width: 80vw;
-}
+  
   
 </style>
 
