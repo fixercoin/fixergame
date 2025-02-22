@@ -116,7 +116,7 @@ function renderChart(chartData) {
         chartData[i].revenue +
         "&#013;Expenses: $" +
         chartData[i].expenses +
-        '"><span class="tooltip">Profit($):' +
+        '"><span class="tooltip">($):' +
         chartData[i].calProfit +
         '</span></span></div><span class="label"><a href="">' +
         chartData[i].quater +
