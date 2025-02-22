@@ -1,0 +1,153 @@
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+body {
+  background-color: #272b34;
+  font-family: sans-serif;
+  font-weight: 300;
+  color: white;
+  line-height: 1em;
+  margin: 0;
+  padding: 2em 1em;
+}
+#bar-chart {
+  margin: 0 auto;
+  max-width: 900px;
+  position: relative;
+}
+#bar-chart h1 {
+  text-align: center;
+  margin: 0;
+  font-size: 1.5em;
+  font-weight: 600;
+}
+#bar-chart .row {
+  position: relative;
+  line-height: 1.25em;
+  margin-bottom: 2em;
+  height: 320px;
+}
+#bar-chart .row .segment {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 100%;
+  flex: 1 100%;
+  display: block;
+  position: relative;
+  -ms-flex-item-align: end;
+  align-self: flex-end;
+}
+#bar-chart .row .segment:after {
+  content: "";
+  display: block;
+  width: 100%;
+  bottom: 0;
+  position: absolute;
+  height: 1px;
+  background-color: #414245;
+  z-index: -1;
+}
+#bar-chart .label {
+  display: block;
+  font-size: 0.7em;
+  text-align: center;
+}
+/* X Axis */
+#bar-chart .x-axis {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0 2em 0 0.5em;
+  height: 100%;
+  margin-bottom: 3.5em;
+}
+#bar-chart .x-axis .year {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  position: relative;
+}
+#bar-chart .x-axis .year .col {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  margin: 0 8%;
+  position: relative;
+}
+#bar-chart .x-axis .year .col .bar {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  background-color: #00aba9;
+  -ms-flex-item-align: end;
+  align-self: flex-end;
+  position: relative;
+  margin: 0;
+  height: 0px;
+  -webkit-transition: height, 1s ease;
+  -o-transition: height, 1s ease;
+  transition: height, 1s ease;
+}
+#bar-chart .x-axis .year .col .bar[style*="height"] {
+  min-height: 2px;
+}
+#bar-chart .x-axis .year .col .bar.negative {
+  -ms-flex-item-align: start;
+  align-self: flex-start;
+  top: 100%;
+}
+#bar-chart .x-axis .label {
+  padding: 0.5em 0.25em 0;
+  top: 328px; /* 320 + 8*/
+  position: absolute;
+  line-height: 1.25em;
+  width: 100%;
+}
+#bar-chart .x-axis .label a {
+  color: #fff;
+  text-decoration: none;
+  display: block;
+}
+#bar-chart .x-axis .label a .name {
+  display: none;
+}
+#bar-chart .x-axis .year .col .bar .tooltip,
+#bar-chart .x-axis .year .col .bar .tooltip:after {
+  display: block;
+  position: absolute;
+  z-index: 2;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+#bar-chart .x-axis .year .col .bar .tooltip {
+  top: -2em;
+  font-size: 0.75em;
+  padding: 2px 5px;
+}
+
+/* Y Axis */
+#bar-chart .y-axis {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  position: absolute;
+  width: 100%;
+  padding: 0 1.5em 0 0.25em;
+}
+#bar-chart .y-axis .label {
+  margin: 0 auto -10px -2.5em;
+  width: 2.5em;
+  text-align: left;
+  padding-right: 0;
+  padding-left: 0.5em;
+}
