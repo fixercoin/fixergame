@@ -83,7 +83,7 @@ function renderChart(chartData) {
 
     for (let i = 0; i < chartData.length; i++) {
       // To better represent % of height
-      var numbersFull = (chartData[i].revenue / maxRageYAxis) * (100 - 4);
+      var numbersFull = (chartData[i].revenue / maxRageYAxis) * (100);
       dynamicXAxis =
         dynamicXAxis +
         ' <div class="year wrap"><div class="col"><span class="bar" style="height:' +
@@ -92,7 +92,7 @@ function renderChart(chartData) {
         chartData[i].revenue +
         "&#013;Expenses: $" +
         chartData[i].expenses +
-        '"><span class="tooltip">MINTME:' +
+        '"><span class="tooltip">' +
         chartData[i].calProfit +
         '</span></span></div><span class="label"><a href="">' +
         chartData[i].quater +
