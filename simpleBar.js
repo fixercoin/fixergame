@@ -18,7 +18,7 @@ var chartData = [
   },
   {
     quater: "DAY2",
-    revenue: 1.40,
+    revenue: 2.40,
     expenses: 1,
     get calProfit() {
       return this.revenue - this.expenses;
@@ -26,22 +26,6 @@ var chartData = [
   },
   {
     quater: "DAY3",
-    revenue: 1.50,
-    expenses: 1,
-    get calProfit() {
-      return this.revenue - this.expenses;
-    }
-  },
-    {
-    quater: "DAY5",
-    revenue: 3.50,
-    expenses: 1,
-    get calProfit() {
-      return this.revenue - this.expenses;
-    }
-  },
-    {
-    quater: "DAY6",
     revenue: 2.50,
     expenses: 1,
     get calProfit() {
@@ -49,8 +33,24 @@ var chartData = [
     }
   },
     {
+    quater: "DAY5",
+    revenue: 4.50,
+    expenses: 1,
+    get calProfit() {
+      return this.revenue - this.expenses;
+    }
+  },
+    {
+    quater: "DAY6",
+    revenue: 3.50,
+    expenses: 1,
+    get calProfit() {
+      return this.revenue - this.expenses;
+    }
+  },
+    {
     quater: "DAY7",
-    revenue: 1.50,
+    revenue: 2.50,
     expenses: 1,
     get calProfit() {
       return this.revenue - this.expenses;
@@ -58,7 +58,7 @@ var chartData = [
   },
   {
     quater: "DAY8",
-    revenue: 2.0,
+    revenue: 3.0,
     expenses: 1,
     get calProfit() {
       return this.revenue - this.expenses;
