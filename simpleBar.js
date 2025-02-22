@@ -18,7 +18,7 @@ var chartData = [
   },
   {
     quater: "DAY2",
-    revenue: 0.80,
+    revenue: 1.00,
     expenses: 0.10,
     get calProfit() {
       return this.revenue - this.expenses;
@@ -54,9 +54,9 @@ function buildYAxis(chartData) {
     });
 
     //Setting Max Range here, will be used in height calculation of bar
-    maxRageYAxis = revArr[0] + 100;
+    maxRageYAxis = revArr[0] + 2000;
     var pointInterval = maxRageYAxis / 10;
-    var initialVal = revArr[0] + 100;
+    var initialVal = revArr[0] + 2000;
     var dynamicYAxis = "";
 
     for (let k = 0; k < 10; k++) {
@@ -83,7 +83,7 @@ function renderChart(chartData) {
 
     for (let i = 0; i < chartData.length; i++) {
       // To better represent % of height
-      var numbersFull = (chartData[i].revenue / maxRageYAxis) * (100);
+      var numbersFull = (chartData[i].revenue / maxRageYAxis) * (100-4);
       dynamicXAxis =
         dynamicXAxis +
         ' <div class="year wrap"><div class="col"><span class="bar" style="height:' +
