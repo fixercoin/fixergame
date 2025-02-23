@@ -63,7 +63,15 @@ var chartData = [
     get calProfit() {
       return this.revenue - this.expenses;
     }
-  }
+  };
+  {
+    quater: "DAY9",
+    revenue: 3.3,
+    expenses: 1,
+    get calProfit() {
+      return this.revenue - this.expenses;
+    }
+    }
 ];
 
 function buildYAxis(chartData) {
