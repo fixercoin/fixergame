@@ -9,7 +9,7 @@ var chartYAxisSet = [];
 //We can dynamically set this ChartData using API as well
 var chartData = [
   {
-    quater: "15Feb",
+    quater: "15",
     revenue: 2.0,
     expenses: 1,
     get calProfit() {
