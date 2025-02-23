@@ -118,9 +118,9 @@ function buildYAxis(chartData) {
     });
 
     //Setting Max Range here, will be used in height calculation of bar
-    maxRageYAxis = revArr[0] + 200;
+    maxRageYAxis = revArr[0] + 100;
     var pointInterval = maxRageYAxis / 10;
-    var initialVal = revArr[0] + 200;
+    var initialVal = revArr[0] + 100;
     var dynamicYAxis = "";
 
     for (let k = 0; k < 10; k++) {
