@@ -82,7 +82,7 @@ var chartData = [
   },
   {
     quater: "24",
-    revenue: 2,
+    revenue: 1.1,
     expenses: 1,
     get calProfit() {
       return this.revenue - this.expenses;
@@ -90,7 +90,7 @@ var chartData = [
   },
   {
     quater: "25",
-    revenue: 2,
+    revenue: 1.1,
     expenses: 1,
     get calProfit() {
       return this.revenue - this.expenses;
@@ -98,7 +98,7 @@ var chartData = [
   },
   {
     quater: "26",
-    revenue: 2,
+    revenue: 1.1,
     expenses: 1,
     get calProfit() {
       return this.revenue - this.expenses;
