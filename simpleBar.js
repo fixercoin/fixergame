@@ -9,92 +9,92 @@ var chartYAxisSet = [];
 //We can dynamically set this ChartData using API as well
 var chartData = [
   {
-    quater: "Q1",
-    revenue: 18450,
-    expenses: 16500,
+    quater: "15Feb",
+    revenue: 10,
+    expenses: 1,
     get calProfit() {
       return this.revenue - this.expenses;
     }
   },
     {
-    quater: "Q1",
-    revenue: 18450,
-    expenses: 16500,
+    quater: "16",
+    revenue: 2.40,
+    expenses: 1,
     get calProfit() {
       return this.revenue - this.expenses;
     }
   },
     {
-    quater: "Q1",
-    revenue: 18450,
-    expenses: 16500,
+    quater: "17",
+    revenue: 2.50,
+    expenses: 1,
     get calProfit() {
       return this.revenue - this.expenses;
     }
   },
     {
-    quater: "Q1",
-    revenue: 18450,
-    expenses: 16500,
+    quater: "18",
+    revenue: 5.50,
+    expenses: 1,
     get calProfit() {
       return this.revenue - this.expenses;
     }
   },  {
-    quater: "Q1",
-    revenue: 18450,
-    expenses: 16500,
+    quater: "19",
+    revenue: 3.50,
+    expenses: 1,
     get calProfit() {
       return this.revenue - this.expenses;
     }
   },  {
-    quater: "Q1",
-    revenue: 18450,
-    expenses: 16500,
+    quater: "20",
+    revenue: 2.5,
+    expenses: 1,
     get calProfit() {
       return this.revenue - this.expenses;
     }
   },  {
-    quater: "Q1",
-    revenue: 18450,
-    expenses: 16500,
+    quater: "21",
+    revenue: 3.10,
+    expenses: 1,
     get calProfit() {
       return this.revenue - this.expenses;
     }
   },  {
-    quater: "Q1",
-    revenue: 18450,
-    expenses: 16500,
+    quater: "22",
+    revenue: 3.0,
+    expenses: 1,
     get calProfit() {
       return this.revenue - this.expenses;
     }
   },  {
-    quater: "Q1",
-    revenue: 18450,
-    expenses: 16500,
+    quater: "23",
+    revenue: 3.2,
+    expenses: 1,
     get calProfit() {
       return this.revenue - this.expenses;
     }
   },
   {
-    quater: "Q2",
-    revenue: 3430,
-    expenses: 3420,
+    quater: "24",
+    revenue: ,
+    expenses: ,
     get calProfit() {
       return this.revenue - this.expenses;
     }
   },
   {
-    quater: "Q3",
-    revenue: 3225,
-    expenses: 3100,
+    quater: "25",
+    revenue: ,
+    expenses: ,
     get calProfit() {
       return this.revenue - this.expenses;
     }
   },
   {
-    quater: "Q4",
-    revenue: 3500,
-    expenses: 3700,
+    quater: "26",
+    revenue: ,
+    expenses: ,
     get calProfit() {
       return this.revenue - this.expenses;
     }
@@ -151,7 +151,7 @@ function renderChart(chartData) {
         chartData[i].revenue +
         "&#013;Expenses: $" +
         chartData[i].expenses +
-        '"><span class="tooltip">Profit($):' +
+        '"><span class="tooltip">' +
         chartData[i].calProfit +
         '</span></span></div><span class="label"><a href="">' +
         chartData[i].quater +
