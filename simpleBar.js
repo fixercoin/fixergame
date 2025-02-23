@@ -1,6 +1,6 @@
 /*
 Author: Niazi
-Copyright: MIT License
+Copyright: 
 */
 
 var maxRageYAxis;
