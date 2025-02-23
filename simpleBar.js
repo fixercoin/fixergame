@@ -39,35 +39,40 @@ var chartData = [
     get calProfit() {
       return this.revenue - this.expenses;
     }
-  },  {
+  },  
+  {
     quater: "19",
     revenue: 3.50,
     expenses: 1,
     get calProfit() {
       return this.revenue - this.expenses;
     }
-  },  {
+  },  
+  {
     quater: "20",
     revenue: 2.5,
     expenses: 1,
     get calProfit() {
       return this.revenue - this.expenses;
     }
-  },  {
+  },  
+  {
     quater: "21",
     revenue: 3.10,
     expenses: 1,
     get calProfit() {
       return this.revenue - this.expenses;
     }
-  },  {
+  },  
+  {
     quater: "22",
     revenue: 3.0,
     expenses: 1,
     get calProfit() {
       return this.revenue - this.expenses;
     }
-  },  {
+  },  
+  {
     quater: "23",
     revenue: 3.2,
     expenses: 1,
