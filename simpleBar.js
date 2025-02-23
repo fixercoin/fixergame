@@ -71,7 +71,7 @@ var chartData = [
     get calProfit() {
       return this.revenue - this.expenses;
     }
-    };
+    }
       
 
 ];
