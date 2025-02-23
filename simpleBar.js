@@ -16,6 +16,65 @@ var chartData = [
       return this.revenue - this.expenses;
     }
   },
+    {
+    quater: "Q1",
+    revenue: 18450,
+    expenses: 16500,
+    get calProfit() {
+      return this.revenue - this.expenses;
+    }
+  },
+    {
+    quater: "Q1",
+    revenue: 18450,
+    expenses: 16500,
+    get calProfit() {
+      return this.revenue - this.expenses;
+    }
+  },
+    {
+    quater: "Q1",
+    revenue: 18450,
+    expenses: 16500,
+    get calProfit() {
+      return this.revenue - this.expenses;
+    }
+  },  {
+    quater: "Q1",
+    revenue: 18450,
+    expenses: 16500,
+    get calProfit() {
+      return this.revenue - this.expenses;
+    }
+  },  {
+    quater: "Q1",
+    revenue: 18450,
+    expenses: 16500,
+    get calProfit() {
+      return this.revenue - this.expenses;
+    }
+  },  {
+    quater: "Q1",
+    revenue: 18450,
+    expenses: 16500,
+    get calProfit() {
+      return this.revenue - this.expenses;
+    }
+  },  {
+    quater: "Q1",
+    revenue: 18450,
+    expenses: 16500,
+    get calProfit() {
+      return this.revenue - this.expenses;
+    }
+  },  {
+    quater: "Q1",
+    revenue: 18450,
+    expenses: 16500,
+    get calProfit() {
+      return this.revenue - this.expenses;
+    }
+  },
   {
     quater: "Q2",
     revenue: 3430,
