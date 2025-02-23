@@ -77,24 +77,24 @@ var chartData = [
   },
   {
     quater: "24",
-    revenue: ,
-    expenses: ,
+    revenue: 2,
+    expenses: 1,
     get calProfit() {
       return this.revenue - this.expenses;
     }
   },
   {
     quater: "25",
-    revenue: ,
-    expenses: ,
+    revenue: 2,
+    expenses: 1,
     get calProfit() {
       return this.revenue - this.expenses;
     }
   },
   {
     quater: "26",
-    revenue: ,
-    expenses: ,
+    revenue: 2,
+    expenses: 1,
     get calProfit() {
       return this.revenue - this.expenses;
     }
