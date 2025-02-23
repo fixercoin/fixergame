@@ -72,6 +72,8 @@ var chartData = [
       return this.revenue - this.expenses;
     }
     };
+      }
+}
 ];
 
 function buildYAxis(chartData) {
