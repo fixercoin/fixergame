@@ -1,88 +1,165 @@
-<html>
-  <head>
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <script type="text/javascript">
-      google.charts.load('current', {'packages':['corechart']});
-      google.charts.setOnLoadCallback(drawChart);
-
-  function drawChart() {
-    var data = google.visualization.arrayToDataTable([
-      ['Mon', 20, 28, 38, 45],
-      ['Tue', 31, 38, 55, 66],
-      ['Wed', 50, 55, 77, 80],
-      ['Thu', 77, 77, 66, 50],
-      ['Fri', 68, 66, 22, 15]
-      // Treat first row as data as well.
-    ], true);
-
-    var options = {
-      legend:'none'
-    };
-
-    var chart = new google.visualization.CandlestickChart(document.getElementById('chart_div'));
-
-    chart.draw(data, options);
-  }
-    </script>
-  </head>
-  <body>
-    <div id="chart_div" style="width: 400px; height: 500px;"></div>
-  </body>
-</html>
-<script src="https://cdn.jsdelivr.net/npm/apexcharts@latest"></script>
-
-<div id="chart"></div>
 <script>
-  var options = {
-        series: [{
-          data: [{
-              x: 1546275600000, // Wednesday
-              y: [6629.81, 6650.5, 6623.04, 6633.33]
-            },
-            {
-              x: 1546362000000, // Thursday
-              y: [6632.01, 6643.59, 6620, 6630.11]
-            },
-            {
-              x: 1546448400000, // Friday
-              y: [6630.71, 6648.95, 6623.34, 6635.65]
-            },
-            // { // SATURDAY : NO DATA
-            //   x: 1546534800000,
-            //   y: [6635.65, 6651, 6629.67, 6638.24]
-            // },
-            // { // SUNDAY : NO DATA
-            //   x: 1546621200000,
-            //   y: [6624.53, 6636.03, 6621.68, 6624.31]
-            // },
-            {
-              x: 1546707600000, // Monday
-              y: [6624.61, 6632.2, 6617, 6626.02]
-            },
-            {
-              x: 1546794000000, // Tuesday
-              y: [6635.65, 6651, 6629.67, 6638.24]
-            },
-          ]
-        }],
-        chart: {
-          type: 'candlestick',
-          height: 350
-        },
-        title: {
-          text: 'Stock Chart last 7 days',
-          align: 'Center'
-        },
-        xaxis: {
-          type: 'datetime'
-        },
-        yaxis: {
-          tooltip: {
-            enabled: true
-          }
-        }
-      };
+  // powered by ApexCharts: https://apexcharts.com/
+const randomInRange = (max, min) => Math.floor(Math.random() * (max - min + 1)) + min;
+const roundToDecimals = (input, precision) => Number(input.toFixed(precision));
+const toFourDecimals = (input) => roundToDecimals(input, 4);
+const numberOfDaysOnChart = window.innerWidth / 15;
+const maxCloseDeviation = 0.125; // max change between open and close
+const maxIntradayDeviation = 0.15; // max deviation between top/bottom of candle and top/bottom of wick
+const maxPremarketDeviation = 0.05;
 
-      var chart = new ApexCharts(document.querySelector("#chart"), options);
-      chart.render();
+const getRandomDate = () => {
+  const monthsWith30Days = [4, 6, 9, 11];
+  const fullDate = {};
+  const month = randomInRange(11, 0);
+  const getDay = () => {
+    if (month === 2) { // february
+      return randomInRange(28, 1);
+    } else if (monthsWith30Days.includes(month)) { // april, june, september, november
+      return randomInRange(30, 1);
+    }
+    // any other month
+    return randomInRange(31, 1);  
+  };
+  const day = getDay();
+  let year = randomInRange(new Date().getFullYear(), 1970);
+  fullDate.month = month;
+  fullDate.day = day;
+  fullDate.year = year;
+  return fullDate;
+};
+
+const getRandomPriceAction = (openPrice) => {
+  const open = openPrice;
+  const closeMax = openPrice * (1 + maxCloseDeviation);
+  const closeMin = openPrice * (1 - maxCloseDeviation);
+  const close = toFourDecimals(randomInRange(closeMax, closeMin));
+  const higherPrice = Math.max(open, close);
+  const lowerPrice = Math.min(open, close);
+  const intraMax = higherPrice * (1 + maxIntradayDeviation);
+  const intraLow = lowerPrice * (1 - maxIntradayDeviation);
+  const high = toFourDecimals(randomInRange(intraMax, higherPrice));
+  const low = toFourDecimals(randomInRange(intraLow, lowerPrice));
+  
+  return [open, high, low, close]; // format required by ApexCharts for candlestick charts
+};
+
+const getOpeningPrice = (basePrice) => {
+  const pMax = basePrice * (1 + maxPremarketDeviation);
+  const pMin = basePrice * (1 - maxPremarketDeviation);
+  return randomInRange(pMax, pMin);
+};
+
+const generateRandomData = () => {
+  const initialPrice = randomInRange(2000, 1);
+  const dates = [];
+  const prices = [];
+  
+  const firstDayPrice = getRandomPriceAction(initialPrice);
+  prices.push(firstDayPrice);
+  
+  const firstDayDate = getRandomDate();
+  const firstDayJSDate = new Date(firstDayDate.year, firstDayDate.month, firstDayDate.day);
+  dates.push(firstDayJSDate);
+  
+  for (let i = 0, l = numberOfDaysOnChart; i < l; i += 1) {
+    const lastPrice = prices[i][3]; // closing price
+    const openingPrice = getOpeningPrice(lastPrice);
+    const newPriceAction = getRandomPriceAction(openingPrice);
+    prices.push(newPriceAction);
+    
+    const lastDate = dates[i];
+    const nextDay = lastDate.setDate(lastDate.getDate() + 1);
+    const nextDayJSDate = new Date(nextDay);
+
+    dates.push(nextDayJSDate);
+  }
+  
+  const data = [];
+  for (let i = 0, l = numberOfDaysOnChart; i < l; i += 1) {
+    data.push({ // one possible format accepted by ApexCharts for rendering candlestick charts
+      x: dates[i],
+      y: prices[i],
+    });
+  }
+  
+  return data;
+};
+
+const options = {
+  series: [{
+    name: 'candle',
+    type: 'candlestick',
+    data: generateRandomData(),
+  }],
+  chart: {
+    height: Math.max(window.innerHeight * 0.8, 300),
+    type: 'line',
+    fontFamily: 'Lato',
+    offsetY: 20,
+  },
+  title: {
+    text: 'Definitely Real Company (REAL)',
+    align: 'left',
+    style: {
+      fontSize: '18px',
+      fontWeight: 'bold',
+    },
+  },
+  stroke: {
+    width: [2, 0]
+  },
+  tooltip: {
+    enabled: true,
+    custom: function({ seriesIndex, dataPointIndex, w }) {
+      let open = w.globals.seriesCandleO[seriesIndex][dataPointIndex].toFixed(2);
+      let high = w.globals.seriesCandleH[seriesIndex][dataPointIndex].toFixed(2);
+      let low = w.globals.seriesCandleL[seriesIndex][dataPointIndex].toFixed(2);
+      let close = w.globals.seriesCandleC[seriesIndex][dataPointIndex].toFixed(2);
+      return (
+        '<div class="chart-tooltip">' +
+        `<p><strong>Open:</strong> ${open}</p>` +
+        `<p><strong>High:</strong> ${high}</p>` +
+        `<p><strong>Low:</strong> ${low}</p>` +
+        `<p><strong>Close:</strong> ${close}` +
+        '</div>'
+      )
+    },
+    onDatasetHover: {
+      highlightDataSeries: true,
+    },
+  },
+  xaxis: {
+    type: 'datetime'
+  },
+  yaxis: {
+    labels: {
+      formatter: (val) => val.toFixed(2),
+    },
+    tooltip: {
+      enabled: true,
+    },
+    crosshairs: {
+      stroke: {
+        width: 1,
+        dashArray: 3,
+      },
+    },
+  },
+  plotOptions: {
+    candlestick: {
+      colors: {
+        upward: '#27AE60',
+        downward: '#CB4335',
+      },
+      wick: {
+        useFillColor: true,
+      },
+    },
+  },
+};
+
+const chart = new ApexCharts(document.getElementById('chart'), options);
+chart.render();
+
 </script>
