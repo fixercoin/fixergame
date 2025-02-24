@@ -1,158 +1,37 @@
-<figure class="css-chart" style="--widget-size: 200px;">
-  <ul class="line-chart">
-    <li style="--x: 40px; --y: 83.3333px;">
-      <div class="data-point" data-value="25"></div>
-      <div class="line-segment" style="--hypotenuse: 123.33333333333333; --angle:-71.07535558394876;"></div>
-    </li>
-    <li style="--x: 80px; --y: 200px;">
-      <div class="data-point" data-value="60"></div>
-      <div class="line-segment" style="--hypotenuse: 64.03124237432849; --angle:51.34019174590991;"></div>
-    </li>
-    <li style="--x: 120px; --y: 150px;">
-      <div class="data-point" data-value="45"></div>
-      <div class="line-segment" style="--hypotenuse: 43.333333333333336; --angle:-22.61986494804045;"></div>
-    </li>
-    <li style="--x: 160px; --y: 166.667px;">
-      <div class="data-point" data-value="50"></div>
-      <div class="line-segment" style="--hypotenuse: 52.068331172711055; --angle:39.805571092265225;"></div>
-    </li>
-    <li style="--x: 200px; --y: 133.333px;">
-      <div class="data-point" data-value="40"></div>
-      <div class="line-segment" style="--hypotenuse: 0; --angle:0;"></div>
-    </li>    
-  </ul>
-</figure>
+<canvas id="bar-chart" width="400" height="300"></canvas>
+<!-- <canvas id="line-chart" width="400" height="400"></canvas> -->
+<script>
+	// Chart.defaults.global.elements.rectangle.backgroundColor = '#FF0000';
 
+var bar_ctx = document.getElementById('bar-chart').getContext('2d');
 
-<style>
-	.css-chart {
-  border-bottom: 1px solid;
-  border-left: 1px solid;
-  display: inline-block;
-  height: var(--widget-size);
-  margin: 5em 15em 1em 5em;
-  padding: 0;
-  position: relative;
-  width: var(--widget-size);
-}
+var purple_orange_gradient = bar_ctx.createLinearGradient(0, 0, 0, 600);
+purple_orange_gradient.addColorStop(0, 'orange');
+purple_orange_gradient.addColorStop(1, 'purple');
 
-.line-chart {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.data-point {
-  background-color: white;
-  border: 2px solid lightblue;
-  border-radius: 50%;
-  bottom: calc(var(--y) - 8px);
-  height: 12px;
-  left: calc(var(--x) - 8px);
-  position: absolute;
-  width: 12px;
-  z-index: 1;
-}
-
-.line-segment {
-  background-color: blue;
-  bottom: var(--y);
-  height: 3px;
-  left: var(--x);
-  position: absolute;
-  transform: rotate(calc(var(--angle) * 1deg));
-  transform-origin: left bottom;
-  width: calc(var(--hypotenuse) * 1px);
-}
-
+var bar_chart = new Chart(bar_ctx, {
+    type: 'bar',
+    data: {
+        labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+        datasets: [{
+            label: '# of Votes',
+            data: [12, 19, 3, 8, 14, 5],
+						backgroundColor: purple_orange_gradient,
+						hoverBackgroundColor: purple_orange_gradient,
+						hoverBorderWidth: 2,
+						hoverBorderColor: 'purple'
+        }]
+    },
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero:true
+                }
+            }]
+        }
+    }
+});
 
 	
-</style>
-<script>
-	const chartValues = [{value: 0.10},{value: 1},{value: 1.4},{value: 1.8},{value: 3.5},{value: 2.1},{value:1.6}]
-
-function formatLineChartData(values, chartHeight) {
-
-  //divide chart size by total number of points to get length of triangle base. That becomes the left offset for each new point
-  //subtract previous point height from new point height to get the rise of the triangle. That becomes the bottom offset for the new point.
-  //use base squared + rise squared to find the length of the hypotenuse. That becomes the width of the line to draw.
-  //use Math.asin(base / hypotenuse) [then convert the radians to degrees] to find the degree angle to rotate the line to.
-  //Multiply the rotation angle by -1 if it needs to rise to meet the next point.
-  
-  const widgetSize = chartHeight;
-  const pointSize = 16;
-
-  const base = (widgetSize - pointSize / 2 ) / values.length;
-
-  let sortedValues = sortValues([...values]);
-
-  const topMostPoint = sortedValues[0].value;
-  let leftOffset = pointSize; //padding for left axis labels
-  let nextPoint = 0;
-  let rise = 0;
-  let cssValues = [];
-
-  for (var i=0, len=values.length-1; i<len; i++) {
-
-    var currentValue = {
-      left: 0,
-      bottom: 0,
-      hypotenuse: 0,
-      angle: 0,
-      value: 0
-    };
-
-    currentValue.value = values[i].value;
-    currentValue.left = leftOffset;
-    leftOffset += base;
-
-    currentValue.bottom = (widgetSize - pointSize) * (currentValue.value / topMostPoint);
-    nextPoint = (widgetSize - pointSize) * (values[i+1].value / topMostPoint);
-
-    rise = currentValue.bottom - nextPoint;
-    currentValue.hypotenuse = Math.sqrt((base * base) + (rise * rise));
-    currentValue.angle = radiansToDegrees(Math.asin(rise / currentValue.hypotenuse));
-
-    cssValues.push(currentValue);
-  }
-
-  var lastPoint = {
-    left: leftOffset,
-    bottom: (widgetSize - pointSize) * (values[values.length - 1].value / topMostPoint),
-    hypotenuse: 0,
-    angle: 0,
-    value: values[values.length - 1].value
-  };
-
-  cssValues.push(lastPoint);
-
-  return cssValues;
-}
-
-const sortValues = values => values.sort((a, b) => b.value - a.value)
-    
-const radiansToDegrees = (rads) => rads * (180 / Math.PI)
-
-const sum = (total, value) => total + value.value
-
-
-function render(data, container) {
-  data.forEach((item) => {
-    let markup = createListItem(item);
-    let listItem = document.createElement("li");
-    listItem.style.cssText = `--x: ${item.left}px; --y: ${item.bottom}px`;
-    listItem.innerHTML = markup;
-    container.appendChild(listItem);
-  });
-}
-
-function createListItem(item) {
-  return `
-  <div class="data-point" data-value="${item.value}"></div>
-  <div class="line-segment" style="--hypotenuse: ${item.hypotenuse}; --angle:${item.angle};"></div>
-  `;
-}
-
-render(formatLineChartData(chartValues, 200), document.getElementById('line-chart'))
-	  </script>
-   
+</script>
