@@ -82,7 +82,7 @@ var chartData = [
   },
   {
     quater: "24",
-    revenue: 1.1,
+    revenue: 2.7,
     expenses: 1,
     get calProfit() {
       return this.revenue - this.expenses;
