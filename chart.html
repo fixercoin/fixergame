@@ -1,3 +1,27 @@
+<style>
+  #chart {
+  min-width: 400px;
+  .apexcharts-tooltip {
+    box-shadow: 1px 4px 6px 0 rgba(15, 15, 15, 0.5);
+    border: none;
+    border-radius: 3px;
+  }
+}
+.chart-tooltip {
+  padding: 5px;
+  p {
+    font-family: 'Lato';
+    font-size: 13px;
+    margin-top: 0;
+    &:not(:last-child) {
+      margin-bottom: 4px;
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+</style>
 <script>
   // powered by ApexCharts: https://apexcharts.com/
 const randomInRange = (max, min) => Math.floor(Math.random() * (max - min + 1)) + min;
