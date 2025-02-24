@@ -17,3 +17,26 @@
     <div id="container"></div>
 </body>
 </html>
+<script>
+    anychart.onDocumentReady(function () {
+        // Load data
+        anychart.data.loadCsvFile("path_to_your_data.csv", function (data) {
+            // Create a data table
+            var dataTable = anychart.data.table(0, 'MMM d, yyyy');
+            dataTable.addData(data);
+
+            // Map data
+            var mapping = dataTable.mapAs({ 'open': 2, 'high': 3, 'low': 4, 'close': 1 });
+
+            // Create a stock chart
+            var chart = anychart.stock();
+            var plot = chart.plot(0);
+            plot.candlestick(mapping);
+
+            // Set chart title and container
+            chart.title('Candlestick Chart');
+            chart.container('container');
+            chart.draw();
+        });
+    });
+		</script>
