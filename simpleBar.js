@@ -11,7 +11,7 @@ var chartData = [
   {
     quater: "15",
     revenue: 2.0,
-    expenses: 1,
+    expenses: 0.1,
     get calProfit() {
       return this.revenue - this.expenses;
     }
@@ -19,7 +19,7 @@ var chartData = [
     {
     quater: "16",
     revenue: 2.40,
-    expenses: 1,
+    expenses: 0.1,
     get calProfit() {
       return this.revenue - this.expenses;
     }
@@ -27,7 +27,7 @@ var chartData = [
     {
     quater: "17",
     revenue: 2.50,
-    expenses: 1,
+    expenses: 0.1,
     get calProfit() {
       return this.revenue - this.expenses;
     }
@@ -35,7 +35,7 @@ var chartData = [
     {
     quater: "18",
     revenue: 5.50,
-    expenses: 1,
+    expenses: 0.1,
     get calProfit() {
       return this.revenue - this.expenses;
     }
@@ -43,7 +43,7 @@ var chartData = [
   {
     quater: "19",
     revenue: 3.50,
-    expenses: 1,
+    expenses: 0.1,
     get calProfit() {
       return this.revenue - this.expenses;
     }
@@ -51,7 +51,7 @@ var chartData = [
   {
     quater: "20",
     revenue: 2.5,
-    expenses: 1,
+    expenses: 0.1,
     get calProfit() {
       return this.revenue - this.expenses;
     }
@@ -59,7 +59,7 @@ var chartData = [
   {
     quater: "21",
     revenue: 3.10,
-    expenses: 1,
+    expenses: 0.1,
     get calProfit() {
       return this.revenue - this.expenses;
     }
@@ -67,7 +67,7 @@ var chartData = [
   {
     quater: "22",
     revenue: 3.0,
-    expenses: 1,
+    expenses: 0.1,
     get calProfit() {
       return this.revenue - this.expenses;
     }
@@ -75,7 +75,7 @@ var chartData = [
   {
     quater: "23",
     revenue: 3.2,
-    expenses: 1,
+    expenses: 0.1,
     get calProfit() {
       return this.revenue - this.expenses;
     }
@@ -83,7 +83,7 @@ var chartData = [
   {
     quater: "24",
     revenue: 2.7,
-    expenses: 1,
+    expenses: 0.1,
     get calProfit() {
       return this.revenue - this.expenses;
     }
@@ -91,7 +91,7 @@ var chartData = [
   {
     quater: "25",
     revenue: 1.1,
-    expenses: 1,
+    expenses: 0.1,
     get calProfit() {
       return this.revenue - this.expenses;
     }
@@ -99,7 +99,7 @@ var chartData = [
   {
     quater: "26",
     revenue: 1.1,
-    expenses: 1,
+    expenses: 0.1,
     get calProfit() {
       return this.revenue - this.expenses;
     }
